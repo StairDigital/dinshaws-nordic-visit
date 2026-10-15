@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Lund Yoghurt Field Notes</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: Dinshaw's identity. Cream page, Dinshaw's red for headings and bands, chocolate ink; each chapter carries one of the brand's pop colours. */
+:root{
+  --bg:#FFF6E6;        /* Dinshaw's cream */
+  --paper:#FFFFFF;
+  --ink:#3A1E14;       /* chocolate */
+  --muted:#7A5747;
+  --line:#F1DCC0;
+  --accent:#DE251E;    /* Dinshaw's red */
+  --cool:#4B2A6F;      /* brand purple for data labels */
+  --red:#DE251E;
+  --display:"Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --body:"Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1D110C;--paper:#2A1912;--ink:#FCEFDD;--muted:#CDB09A;--line:#463026;--accent:#FF574D;--cool:#C9A8F0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1D110C;--paper:#2A1912;--ink:#FCEFDD;--muted:#CDB09A;--line:#463026;--accent:#FF574D;--cool:#C9A8F0;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.narrow{max-width:680px}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-wrap:balance;margin:0;letter-spacing:0}
+h2{font-size:clamp(2.4rem,5.4vw,4rem);line-height:.95;font-weight:800;text-transform:uppercase;color:var(--accent)}
+h3{font-size:1.6rem;font-weight:700;line-height:1.1}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+img{display:block;max-width:100%}
+
+/* HERO: full-screen, a dark text band on the left; a rotating photo reel blends into it from the right */
+.hero{--hb:#DE251E;--hfg:#ffffff;--hmut:rgba(255,255,255,.82);--hacc:#FFD166;
+  position:relative;height:100vh;height:100svh;min-height:600px;background:var(--hb);color:var(--hfg);overflow:hidden;isolation:isolate}
+.reel{position:absolute;inset:0 0 0 30%;z-index:0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 34%);mask-image:linear-gradient(90deg,transparent 0,#000 34%)}
+.reel figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.6s ease}
+.reel figure.on{opacity:1}
+.reel img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);will-change:transform}
+.reel figure.on img{animation:kb 7.5s ease-out forwards}
+@keyframes kb{from{transform:scale(1.14) translate3d(1.5%,1%,0)}to{transform:scale(1.02) translate3d(0,0,0)}}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(120,12,8,.35) 0,rgba(120,12,8,0) 22%,rgba(120,12,8,0) 62%,rgba(150,16,10,.8) 100%)}
+.hero-band{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:space-between;
+  padding-block:calc(28px + env(safe-area-inset-top,0px)) calc(28px + env(safe-area-inset-bottom,0px));
+  padding-left:max(28px, env(safe-area-inset-left, 0px));padding-right:max(28px, env(safe-area-inset-right, 0px));max-width:min(800px,60%)}
+.hero-top{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hmut)}
+.hero-mid{max-width:700px}
+.hero h1{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(3.2rem,7vw,7.4rem);line-height:.9;letter-spacing:0;color:#fff;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:800;color:var(--hacc)}
+.hero .lede{margin-top:26px;font-size:clamp(1.02rem,1.3vw,1.22rem);line-height:1.6;color:#fff;max-width:50ch}
+.stats{display:flex;flex-wrap:wrap;gap:18px 26px;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.35)}
+.stats div{display:flex;flex-direction:column;gap:2px}
+.stats b{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.stats span{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--hmut)}
+.hero-foot{display:flex;align-items:center;gap:18px;font-family:var(--mono);font-size:.72rem;color:var(--hmut)}
+.hero-foot a{color:var(--hfg);text-decoration:none;border-bottom:1px solid var(--hacc);padding-bottom:2px}
+.reel-ui{position:absolute;z-index:2;right:max(28px, env(safe-area-inset-right, 0px));bottom:calc(28px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:flex-end;gap:12px;max-width:min(420px,40%)}
+.reel-cap{font-size:.86rem;color:#e6eef2;text-align:right;min-height:2.6em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.reel-cap small{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--hacc)}
+.dots{display:flex;gap:6px}
+.dots button{width:30px;height:3px;border:0;padding:0;background:rgba(255,255,255,.28);cursor:pointer;position:relative;overflow:hidden}
+.dots button::before{content:"";position:absolute;inset:-10px 0}
+.dots button.on::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:left;animation:fill var(--dur,6s) linear forwards}
+.dots button.done{background:rgba(255,255,255,.75)}
+.dots button:focus-visible{outline:2px solid var(--hacc);outline-offset:4px}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.reel-ctl{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;cursor:pointer}
+.reel-ctl:hover,.reel-ctl:focus-visible{border-color:#fff;outline:none}
+@media(max-width:900px){
+  .reel{inset:0;-webkit-mask-image:none;mask-image:none}
+  .reel::after{background:linear-gradient(180deg,rgba(150,16,10,.5) 0,rgba(180,20,14,.2) 30%,rgba(205,30,24,.92) 62%,#DE251E 100%)}
+  .hero-band{max-width:none;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+  .hero-mid{margin-top:auto}
+  .reel-ui{top:calc(92px + env(safe-area-inset-top,0px));bottom:auto;left:max(16px, env(safe-area-inset-left, 0px));right:auto;align-items:flex-start;max-width:none}
+  .reel-cap{display:none}
+  .stats{gap:14px 24px}.stats b{font-size:1.5rem}
+  .hero-foot{display:none}
+}
+@media(max-height:700px) and (min-width:901px){.hero h1{font-size:clamp(2.4rem,5vw,4.4rem)}.stats{margin-top:20px}.hero .lede{margin-top:16px}}
+@media (prefers-reduced-motion: reduce){.reel figure.on img{animation:none;transform:none}.reel figure{transition:none}.dots button.on::after{animation:none;transform:none}}
+
+/* ROUTE */
+.route{border-bottom:1px solid var(--line);background:var(--paper)}
+.route ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.route li{padding-block:20px;border-left:1px solid var(--line);padding-left:16px;min-width:0}
+.route li:first-child{border-left:0;padding-left:0}
+.route a{color:var(--ink);text-decoration:none;display:block}
+.route a:hover .rt,.route a:focus-visible .rt{color:var(--accent)}
+.route .n{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.route .rt{font-family:var(--display);font-size:1.12rem;line-height:1.2;margin-top:4px}
+@media(max-width:760px){.route ol{grid-template-columns:1fr 1fr}.route li{border-left:0;padding-left:0;border-top:1px solid var(--line)}.route li:nth-child(-n+2){border-top:0}}
+
+/* CHAPTERS */
+section.ch{padding-block:96px 32px}
+.ch-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px 64px;align-items:end;margin-bottom:44px}
+.ch-head .intro{color:var(--muted);font-size:1.05rem;max-width:56ch}
+.ch-num{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--accent);margin-bottom:10px}
+@media(max-width:820px){.ch-head{grid-template-columns:1fr}}
+
+/* photos */
+.ph{margin:0;cursor:zoom-in;position:relative;background:var(--line);overflow:hidden;border:0;padding:0;display:block;width:100%}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ph:hover img{transform:scale(1.03)}
+.ph:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+figcaption,.cap{font-size:.84rem;color:var(--muted);margin-top:10px;line-height:1.45}
+.cap b{color:var(--ink);font-weight:600}
+figure{margin:0;min-width:0}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.r43 .ph{aspect-ratio:4/3}.r34 .ph{aspect-ratio:3/4}.r11 .ph{aspect-ratio:1/1}.r169 .ph{aspect-ratio:16/10}
+@media(max-width:860px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.g2,.g3{grid-template-columns:1fr}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.bleed{margin-block:64px}
+.bleed .ph{aspect-ratio:21/9;max-height:620px}
+@media(max-width:620px){.bleed .ph{aspect-ratio:4/3}}
+
+/* split feature */
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center;margin-block:72px}
+.split.rev{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.split.rev > :first-child{order:2}
+@media(max-width:820px){.split,.split.rev{grid-template-columns:1fr;gap:24px}.split.rev > :first-child{order:0}}
+.body p + p{margin-top:14px}
+.body h3{margin-bottom:12px}
+
+/* lists */
+.facts{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.facts li{padding-left:18px;position:relative}
+.facts li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* spotlight table of cases */
+.cases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);margin-top:28px}
+.case{padding:22px 22px 22px 0;border-bottom:1px solid var(--line);min-width:0}
+.case + .case{padding-left:22px;border-left:1px solid var(--line)}
+.case:nth-child(4n+1){padding-left:0;border-left:0}
+.case .who{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cool)}
+.case h4{font-family:var(--display);font-weight:500;font-size:1.15rem;margin:6px 0 6px;line-height:1.25}
+.case p{font-size:.9rem;color:var(--muted)}
+.case .fmt{font-family:var(--mono);font-size:.74rem;color:var(--ink);margin-top:8px}
+@media(max-width:860px){.cases{grid-template-columns:1fr 1fr}.case:nth-child(4n+1){padding-left:22px;border-left:1px solid var(--line)}.case:nth-child(2n+1){padding-left:0;border-left:0}}
+@media(max-width:560px){.cases{grid-template-columns:1fr}.case,.case + .case{padding-left:0!important;border-left:0!important;padding-right:0}}
+.group-label{font-family:var(--display);font-style:italic;font-size:1.2rem;margin-top:48px}
+
+/* numbers */
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
+.fig{background:var(--paper);border:1px solid var(--line);padding:22px}
+.fig .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fig .v{font-family:var(--display);font-size:2.6rem;line-height:1;margin-top:8px;font-variant-numeric:tabular-nums}
+.fig .v small{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-left:4px}
+.fig.hi .v{color:var(--accent)}
+@media(max-width:480px){.figs{grid-template-columns:1fr}}
+
+/* concentration comparison */
+.conc{background:var(--paper);border:1px solid var(--line);padding:26px;margin-top:22px}
+.conc-row{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px 18px;align-items:center;padding-block:12px;border-top:1px solid var(--line)}
+.conc-row:first-of-type{border-top:0}
+.conc-row .lbl{font-weight:600;font-size:.95rem}
+.bars{display:grid;gap:6px;min-width:0}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-family:var(--mono);font-size:.76rem;color:var(--muted);min-width:0}
+.bar span.b{height:12px;background:var(--cool);flex:none}
+.bar span.b.w{background:var(--line);outline:1px solid var(--muted);outline-offset:-1px}
+.bar span.t{flex-basis:100%}
+.conc .note{font-size:.86rem;color:var(--muted);margin-top:14px}
+@media(max-width:560px){.conc-row{grid-template-columns:1fr}}
+
+/* yoghurt types */
+.types{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:22px}
+.types div{padding:18px 14px 18px 0;min-width:0}
+.types div + div{padding-left:14px;border-left:1px solid var(--line)}
+.types b{display:block;font-family:var(--display);font-weight:500;font-size:1.15rem}
+.types span{font-size:.82rem;color:var(--muted)}
+@media(max-width:700px){.types{grid-template-columns:1fr 1fr}.types div,.types div + div{padding:14px 0;border-left:0;border-top:1px solid var(--line)}.types div:nth-child(-n+2){border-top:0}}
+
+.varieties{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:22px}
+.var{border-top:2px solid var(--ink);padding-top:12px;min-width:0}
+.var b{font-family:var(--display);font-weight:500;font-size:1.2rem;display:block}
+.var .o{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.var p{font-size:.86rem;color:var(--muted);margin-top:4px}
+@media(max-width:820px){.varieties{grid-template-columns:1fr 1fr}}
+
+/* tasting */
+.tasting{display:grid;gap:56px;margin-top:12px}
+.taste{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:36px;align-items:start;border-top:1px solid var(--line);padding-top:36px}
+.taste .pics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.taste .pics .ph{aspect-ratio:3/4}
+.taste .pics.one{grid-template-columns:1fr}
+.taste .pics.one .ph{aspect-ratio:4/3}
+.taste .origin{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.taste h3{margin:6px 0 4px}
+.taste .claim{font-family:var(--display);font-style:italic;color:var(--accent);font-size:1.05rem}
+.nut{width:100%;border-collapse:collapse;margin-top:18px;font-size:.88rem;font-variant-numeric:tabular-nums}
+.nut caption{text-align:left;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-bottom:6px}
+.nut td{padding:6px 0;border-top:1px solid var(--line)}
+.nut td:last-child{text-align:right;font-family:var(--mono)}
+@media(max-width:820px){.taste{grid-template-columns:1fr}}
+
+/* notebook */
+.notebook{background:var(--paper);border-block:1px solid var(--line);margin-top:96px}
+.notebook .wrap{padding-block:96px}
+.brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:44px}
+.brief h4{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.brief .big{font-family:var(--display);font-size:1.5rem;line-height:1.25}
+.brief .big em{color:var(--accent);font-style:normal}
+@media(max-width:820px){.brief{grid-template-columns:1fr}}
+.flows{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:64px}
+@media(max-width:980px){.flows{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.flows{grid-template-columns:1fr}}
+.flow{min-width:0}
+.flow h3{font-size:1.6rem;font-style:italic;font-weight:300}
+.flow .base{font-family:var(--mono);font-size:.74rem;color:var(--muted);margin:4px 0 14px}
+.flow ol{list-style:none;counter-reset:s;margin:0;padding:0}
+.flow li{counter-increment:s;position:relative;padding:8px 0 8px 34px;border-top:1px solid var(--line);font-size:.92rem;line-height:1.4}
+.flow li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:9px;font-family:var(--mono);font-size:.72rem;color:var(--cool)}
+.flow li.key{color:var(--accent);font-weight:600}
+.flow .ph{aspect-ratio:3/4;margin-top:18px}
+
+footer{padding-block:72px 64px}
+footer .end{font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:300;max-width:26ch;line-height:1.15}
+footer .sig{font-family:var(--mono);font-size:.76rem;color:var(--muted);margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;margin:0}
+dialog.lb::backdrop{background:rgba(8,14,18,.92)}
+.lb-in{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-in img{max-width:min(1400px,100%);max-height:calc(100% - 80px);object-fit:contain}
+.lb-cap{color:#d8e2e8;font-size:.9rem;max-width:70ch;text-align:center}
+.lb-btn{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25);width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover,.lb-btn:focus-visible{background:rgba(255,255,255,.22);outline:none}
+.lb-x{top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
+.lb-p{left:calc(12px + env(safe-area-inset-left,0px));top:50%}
+.lb-n{right:calc(12px + env(safe-area-inset-right,0px));top:50%}
+.lb-count{position:absolute;top:calc(22px + env(safe-area-inset-top,0px));left:calc(20px + env(safe-area-inset-left,0px));font-family:var(--mono);font-size:.76rem;color:#9fb2bd}
+
+@media (prefers-reduced-motion: reduce){.ph img{transition:none}.ph:hover img{transform:none}}
+
+/* video + insight blocks */
+.vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:22px}
+@media(max-width:900px){.vids{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.vid{margin:0;min-width:0}
+.vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#0d171d;border:0}
+.vid figcaption{margin-top:8px}
+.vids.wide{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:700px){.vids.wide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.insight{background:var(--paper);border:1px solid var(--line);padding:clamp(20px,3vw,36px);margin-block:40px}
+.insight .eyebrow{margin-bottom:8px}
+.insight h3{margin-bottom:6px}
+.insight .src{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-bottom:18px}
+.heads{list-style:none;counter-reset:h;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 32px}
+.heads li{counter-increment:h;position:relative;padding-left:36px;min-width:0}
+.heads li::before{content:counter(h);position:absolute;left:0;top:0;font-family:var(--display);font-size:1.4rem;line-height:1;color:var(--accent)}
+.heads b{display:block;font-weight:600}
+.heads span{color:var(--muted);font-size:.92rem}
+@media(max-width:720px){.heads{grid-template-columns:1fr}}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:28px}
+.cols > div{min-width:0}
+.cols h4{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cool);margin:0 0 6px}
+@media(max-width:900px){.cols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cols{grid-template-columns:1fr}}
+.figs.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.fig{min-width:0}
+@media(max-width:560px){.fig .v{font-size:1.9rem}.fig{padding:16px}}
+@media(max-width:760px){.figs.four{grid-template-columns:1fr 1fr}}
+.sub{font-family:var(--display);font-weight:400;font-size:1.6rem;margin-top:64px}
+.sub + p{color:var(--muted);max-width:62ch;margin-top:6px}
+.band{background:var(--paper);border-block:1px solid var(--line)}
+.band .wrap{padding-block:96px 64px}
+.route ol{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.route li:nth-child(5){border-left:0;padding-left:0}
+.route li:nth-child(n+5){border-top:1px solid var(--line)}
+.reel video{width:100%;height:100%;object-fit:cover}
+
+/* Dinshaw's identity layer */
+html,body{overflow-x:clip}
+@media(max-width:600px){.hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}}
+.route{background:var(--red);border-bottom:0}
+.route a{color:#fff}
+.route .n{color:rgba(255,255,255,.75);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.route .rt{font-family:var(--display);font-weight:700;font-size:1.25rem;text-transform:uppercase}
+.route li{border-color:rgba(255,255,255,.25)!important}
+.route a:hover .rt,.route a:focus-visible .rt{color:#FFD166}
+section.ch,section.notebook{--pop:var(--red);--popfg:#fff}
+#chilled{--pop:#FFAB00;--popfg:#3A1E14}
+#process{--pop:#21A9D1;--popfg:#0E2A35}
+#tasting{--pop:#4B2A6F;--popfg:#fff}
+#dinner{--pop:#ADD302;--popfg:#2B3500}
+#factory{--pop:#21A9D1;--popfg:#0E2A35}
+#shelf{--pop:#FFAB00;--popfg:#3A1E14}
+.ch-num{display:inline-block;background:var(--pop);color:var(--popfg);font-family:var(--mono);font-style:normal;font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.sub{font-family:var(--display);font-weight:700;text-transform:uppercase;color:var(--ink);font-size:1.9rem}
+.heads li::before{font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--accent)}
+.fig .v{font-family:var(--display);font-weight:800}
+.fig.hi{background:var(--red);border-color:var(--red)}
+.fig.hi .v,.fig.hi .k,.fig.hi .v small{color:#fff!important}
+.facts li::before{background:var(--pop,var(--accent))}
+.var{border-top-color:var(--accent)}
+.var b,.case h4,.flow h3,.taste h3{font-family:var(--display);font-weight:700}
+.flow h3{font-style:normal;text-transform:uppercase;color:var(--accent);font-size:1.9rem}
+.taste .claim{font-family:var(--display);font-style:normal;font-weight:700;color:var(--accent);font-size:1.2rem}
+.brief .big{font-family:var(--display);font-weight:700;font-size:1.8rem}
+.group-label{font-family:var(--display);font-style:normal;font-weight:700;text-transform:uppercase;color:var(--accent)}
+footer{background:var(--red);color:#fff}
+footer .end{font-family:var(--display);font-weight:800;text-transform:uppercase;color:#fff}
+footer .sig{color:rgba(255,255,255,.85)}
+.ph{border-radius:14px}
+.vid video{border-radius:14px}
+.insight{border-radius:18px}
+.fig{border-radius:14px}
+.bar span.b{background:var(--red)}
+</style>
+
+</head><body>
+<header class="hero" aria-label="Lund field notes">
+  <div class="reel" id="reel" aria-hidden="true">
+    <figure class="on" data-k="Arrival" data-c="Shubham Saraff and Zervin Rana at Tetra Pak, Lund"><img src="img/hero_r07.jpg" alt="Shubham Saraff and Zervin Rana at Tetra Pak, Lund" style="object-position:50% 64%"></figure>
+    <figure data-k="Arrival" data-c="The Indian flag flies at the entrance"><img src="img/hero_r03.jpg" alt="The Indian flag flies at the entrance" style="object-position:50% 40%" loading="lazy"></figure>
+    <figure data-k="Session 1" data-c="Chilled Innovation Spotlight"><img src="img/hero_l06.jpg" alt="Chilled Innovation Spotlight" style="object-position:50% 45%" loading="lazy"></figure>
+    <figure data-k="Session 2" data-c="Best-practice lines for yoghurt production"><img src="img/hero_p07.jpg" alt="Best-practice lines for yoghurt production" style="object-position:50% 45%" loading="lazy"></figure>
+    <figure data-k="Session 1" data-c="A chilled carton portfolio"><img src="img/hero_l24.jpg" alt="A chilled carton portfolio" style="object-position:50% 38%" loading="lazy"></figure>
+    <figure data-k="Diplom-Is" data-c="Ice cream line, Gjelleråsen"><video src="vid/hero_w11.mp4" muted loop playsinline preload="none"></video></figure>
+    <figure data-k="The floor" data-c="Blending, homogenisation, pasteurisation, separation"><img src="img/hero_p04.jpg" alt="Blending, homogenisation, pasteurisation, separation" style="object-position:50% 55%" loading="lazy"></figure>
+    <figure data-k="Diplom-Is" data-c="Robot packing, Gjelleråsen"><video src="vid/hero_v13.mp4" muted loop playsinline preload="none"></video></figure>
+    <figure data-k="Lund" data-c="World Trade Center Lund"><img src="img/hero_r10.jpg" alt="World Trade Center Lund" style="object-position:50% 40%" loading="lazy"></figure>
+  </div>
+  <div class="hero-band">
+    <div class="hero-top">Field Notes · Sweden and Norway · October 2026</div>
+    <div class="hero-mid">
+      <h1>Yoghurt, Skyr and the <em>Chilled Carton</em></h1>
+      <p class="lede">A working visit to Tetra Pak in Lund: a session on chilled packaging and global innovation, a line-by-line walk through yoghurt production, a table of Nordic products opened and tasted, and a notebook of process flows written for an Indian dairy.</p>
+      <div class="stats">
+        <div><b>2</b><span>Sessions</span></div>
+        <div><b>12</b><span>Innovation cases</span></div>
+        <div><b>10</b><span>Products in hand</span></div>
+        <div><b>8</b><span>Yoghurt varieties</span></div>
+        <div><b>4</b><span>Process flows</span></div>
+      </div>
+    </div>
+    <div class="hero-foot"><a href="#arrival">Begin the journey ↓</a></div>
+  </div>
+</header>
+
+<nav class="route" aria-label="Chapters">
+  <div class="wrap">
+    <ol>
+      <li><a href="#arrival"><div class="n">Chapter 1</div><div class="rt">Morning in Lund</div></a></li>
+      <li><a href="#chilled"><div class="n">Chapter 2</div><div class="rt">The Tetra Top Session</div></a></li>
+      <li><a href="#process"><div class="n">Chapter 3</div><div class="rt">How Yoghurt Is Made</div></a></li>
+      <li><a href="#tasting"><div class="n">Chapter 4</div><div class="rt">On the Table</div></a></li>
+      <li><a href="#dinner"><div class="n">Chapter 5</div><div class="rt">The Dinner Table</div></a></li>
+      <li><a href="#notebook"><div class="n">Chapter 6</div><div class="rt">The Night Session</div></a></li>
+      <li><a href="#factory"><div class="n">Chapter 7</div><div class="rt">Inside Diplom-Is</div></a></li>
+      <li><a href="#shelf"><div class="n">Chapter 8</div><div class="rt">On the Norwegian Shelf</div></a></li>
+    </ol>
+  </div>
+</nav>
+
+<main>
+<!-- 1 ARRIVAL -->
+<section class="ch" id="arrival">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 1</div><h2>Morning in Lund</h2></div>
+      <p class="intro">The day began at breakfast with a process expert, ahead of the Tetra Pak meetings. Lund in the south of Sweden is home to Tetra Pak, and on the day of the visit the Indian tricolour flew at the entrance beside the Swedish and American flags.</p>
+    </div>
+    <div class="insight">
+      <div class="eyebrow">Over breakfast</div>
+      <h3>The planned high-protein (skyr) plant</h3>
+      <p class="src">From the breakfast discussion with the process expert</p>
+      <ol class="heads">
+        <li><b>The process is proven elsewhere</b><span>A pilot plant in Singapore, linked to Chr. Hansen, runs on the same process route, and SPX has offered live access to a running plant.</span></li>
+        <li><b>Design for 120%, not 100%</b><span>Protein plants are sized 20% above the stated requirement, as concentration yields rarely match the plan.</span></li>
+        <li><b>Freeze the process first</b><span>Once the recipe and process are fixed, suppliers can be held to what they commit.</span></li>
+        <li><b>Fast commissioning</b><span>The design allows the plant to be ready after about 4 hours of vapour sterilisation, without a separate batch trial.</span></li>
+        <li><b>Capex is closer to Rs 30 to 34 Cr</b><span>Higher than the first Rs 20 Cr estimate, once the building, Bactofuge and filling are included.</span></li>
+        <li><b>Benchmark the filler</b><span>Filling alternatives should be compared, not only the premium option.</span></li>
+      </ol>
+      <div class="figs four">
+        <div class="fig"><div class="k">Building</div><div class="v">8<small>Rs Cr</small></div></div>
+        <div class="fig"><div class="k">Processing</div><div class="v">17 to 18<small>Rs Cr</small></div></div>
+        <div class="fig"><div class="k">Filling</div><div class="v">4 to 6<small>Rs Cr</small></div></div>
+        <div class="fig hi"><div class="k">Total</div><div class="v">30 to 34<small>Rs Cr</small></div></div>
+      </div>
+      <p class="cap" style="margin-top:12px">Working estimate as discussed; to be validated with supplier quotes.</p>
+    </div>
+    <div class="grid g3 r34">
+      <figure><button class="ph" data-cap="Zervin Rana and Shubham Saraff beneath the Indian flag at the Tetra Pak entrance, Lund"><img src="img/r04.jpg" alt="Two visitors beneath a row of flags including the Indian and Swedish flags" loading="lazy"></button><figcaption>Zervin Rana and Shubham Saraff beneath the Indian flag at the entrance.</figcaption></figure>
+      <figure><button class="ph" data-cap="The flag garden at the Tetra Pak entrance"><img src="img/r08.jpg" alt="Flag poles above a planted garden path" loading="lazy"></button><figcaption>The flag garden at the entrance.</figcaption></figure>
+      <figure><button class="ph" data-cap="Shubham Saraff and Zervin Rana arriving at Tetra Pak, Lund"><img src="img/r05.jpg" alt="Two visitors in front of the red-brick Tetra Pak building" loading="lazy"></button><figcaption>Shubham Saraff and Zervin Rana at the main entrance.</figcaption></figure>
+    </div>
+    <div class="grid g3 r43" style="margin-top:18px">
+      <figure><button class="ph" data-cap="World Trade Center Lund, Hedvig Möllers gata"><img src="img/r10.jpg" alt="Two visitors in winter jackets at the World Trade Center Lund sign" loading="lazy"></button><figcaption>World Trade Center Lund, Hedvig Möllers gata.</figcaption></figure>
+      <figure><button class="ph" data-cap="Mr Verma at World Trade Center Lund"><img src="img/r12.jpg" alt="A visitor in a blazer at the World Trade Center Lund sign" loading="lazy"></button><figcaption>Mr Verma at World Trade Center Lund.</figcaption></figure>
+      <figure><button class="ph" data-cap="Heritage exhibit in the Tetra Pak building"><img src="img/p02.jpg" alt="A wooden mechanical exhibit inside a glass display case" loading="lazy"></button><figcaption>A heritage exhibit in the building lobby.</figcaption></figure>
+    </div>
+    <div class="grid g4 r34" style="margin-top:18px">
+      <figure><button class="ph" data-cap="Under the flags at the Tetra Pak entrance, Lund"><img src="img/r02.jpg" alt="Under the flags at the Tetra Pak entrance, Lund" loading="lazy"></button></figure><figure><button class="ph" data-cap="The Indian, Swedish and American flags at the entrance"><img src="img/r06.jpg" alt="The Indian, Swedish and American flags at the entrance" loading="lazy"></button></figure><figure><button class="ph" data-cap="The flag line at Tetra Pak, Lund"><img src="img/r11.jpg" alt="The flag line at Tetra Pak, Lund" loading="lazy"></button></figure><figure><button class="ph" data-cap="The entrance garden, Tetra Pak, Lund"><img src="img/r01.jpg" alt="The entrance garden, Tetra Pak, Lund" loading="lazy"></button></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 2 CHILLED -->
+<section class="ch" id="chilled">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 2</div><h2>The Tetra Top Session</h2></div>
+      <p class="intro">With Leopoldo, Business Stream Director for Tetra Top, and Thomas, Tetra Top equipment owner. The session covered the Tetra Top system, global category cases and how consumers evolve, with a tasting of protein products.</p>
+    </div>
+
+    <div class="split">
+      <figure><button class="ph" style="aspect-ratio:16/10" data-cap="Chilled packaging solution families: Tetra Rex, Tetra Brik, Tetra Top"><img src="img/l26.jpg" alt="Slide showing three carton families" loading="lazy"></button></figure>
+      <div class="body">
+        <div class="eyebrow">The range</div>
+        <h3>3 chilled carton families</h3>
+        <ul class="facts">
+          <li><b>Tetra Rex®</b>, described as an icon of the chilled packaging world.</li>
+          <li><b>Tetra Brik®</b>, positioned as the smart way to stand out on the shelf.</li>
+          <li><b>Tetra Top®</b>, positioned as the sustainable alternative to the plastic bottle.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split rev">
+      <figure><button class="ph" style="aspect-ratio:16/10" data-cap="Lead your category by being the first: the spoonable Tetra Top package"><img src="img/l02.jpg" alt="Slide showing a spoonable carton cup of cookie yoghurt" loading="lazy"></button></figure>
+      <div class="body">
+        <div class="eyebrow">New format</div>
+        <h3>A spoonable carton cup</h3>
+        <p>Presented under the line "Lead your category by being the first". The pack is described as:</p>
+        <ul class="facts">
+          <li>Powered by paper, with up to 93% renewable content and up to 75% smaller carbon footprint.</li>
+          <li>An eye-catching loop on the lid that helps the brand stand out.</li>
+          <li>Robust on the go, and easy for children to handle.</li>
+          <li>A one-piece full-top lid that is intuitive to open and remove, and can be reclosed.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="insight">
+      <div class="eyebrow">The system</div>
+      <h3>Tetra Top in numbers</h3>
+      <p class="src">As discussed in the session</p>
+      <div class="figs four">
+        <div class="fig hi"><div class="k">Chilled shelf life</div><div class="v">45 to 60<small>days below 8°C</small></div></div>
+        <div class="fig"><div class="k">Speed</div><div class="v">9,000<small>packs / hour</small></div></div>
+        <div class="fig"><div class="k">Size change</div><div class="v">5<small>minutes</small></div></div>
+        <div class="fig"><div class="k">Family change</div><div class="v">1<small>week</small></div></div>
+      </div>
+      <div class="cols">
+        <div><h4>Hygiene</h4><ul class="facts" style="margin-top:0">
+          <li>Chilled, not aseptic; can sit behind HTST, ESL or UHT processing.</li>
+          <li>Described as "ultra-high hygiene", between a basic pasteurised filler and an aseptic one.</li>
+          <li>Shelf life is usually limited by processing and distribution temperature, not by the filler.</li>
+          <li>Hot-climate references: Japan, Korea, Indonesia and Malaysia.</li></ul></div>
+        <div><h4>Flexibility</h4><ul class="facts" style="margin-top:0">
+          <li>2 sides: 1 product split across both, or 2 products from 2 processing lines.</li>
+          <li>One side can be cleaned while the other runs.</li>
+          <li>4 pack families: Mini, MiniV, Midi and Base, from 200 to 1,000 ml.</li>
+          <li>Same volume, different impression: a slim 250 ml MiniV reads premium, a squat 250 ml Mini reads everyday.</li></ul></div>
+        <div><h4>Packaging cost</h4><ul class="facts" style="margin-top:0">
+          <li>Cost index: standard 100, plastic barrier 125, aluminium foil 130.</li>
+          <li>In Europe, packaging is about 4% of a yoghurt retailing at about EUR 2.</li>
+          <li>Chilled: 30 to 120 days without foil. Ambient: 4 to 9 months with foil.</li></ul></div>
+      </div>
+    </div>
+    <div class="eyebrow" style="margin-top:24px">Chilled Innovation Spotlight</div>
+    <h3 style="margin-top:8px;font-size:1.9rem;font-weight:300">How dairies are using Tetra Top</h3>
+
+    <p class="group-label">Setting the way ahead with fermented products</p>
+    <div class="cases">
+      <div class="case"><div class="who">Danone · Romania</div><h4>High-protein drinking yogurt</h4><p>Improved recipe with 25 g protein per pack, for growing and maintaining muscle mass; adds vitamin B9 and magnesium.</p><div class="fmt">TT 330 MiniV</div></div>
+      <div class="case"><div class="who">Mlekpol · Poland</div><h4>Ayran</h4><p>Targets the growing fermented-drinks category in Poland, for consumers open to new flavours and to traditional products from other countries.</p><div class="fmt">TT 330 Mini</div></div>
+      <div class="case"><div class="who">C.Le Latte Italia · Italy</div><h4>Kefir</h4><p>A new kefir range: plain, orange with ginger and cardamom, and multifruits, for breakfast and snacking.</p><div class="fmt">TT 250 Midi</div></div>
+      <div class="case"><div class="who">Vindija · Croatia</div><h4>Plant-based yogurt</h4><p>Fermented oat-based drink in 2 varieties, with big fruit particles; aimed at health-conscious consumers.</p><div class="fmt">TT 330 MiniV</div></div>
+      <div class="case"><div class="who">NÖM · Austria</div><h4>Buttermilk</h4><p>A refreshing, digestible snack with low fat and a source of protein and calcium; fruity range extensions for all ages.</p><div class="fmt">TT 500 Base</div></div>
+      <div class="case"><div class="who">Meiji · Japan</div><h4>Protein-enriched yogurt</h4><p>High-protein drinking yogurt for new occasions: after workouts, and as a snack or meal replacement.</p><div class="fmt">TT 250 Mini</div></div>
+      <div class="case"><div class="who">Danone · Italy (made in Romania)</div><h4>Kefir</h4><p>The first kefir in a carton in Italy, following the trend for healthy fermented drinks across Europe.</p><div class="fmt">TT 330 Midi</div></div>
+      <div class="case"><div class="who">mMilk · Thailand</div><h4>Elderberry yogurt</h4><p>Revitalises a drinking-yogurt portfolio with a new design and an elderberry "superfruit" flavour.</p><div class="fmt">TT 200 Midi</div></div>
+    </div>
+
+    <p class="group-label">Growing with new flavours and recipes beyond the mainstream</p>
+    <div class="cases">
+      <div class="case"><div class="who">BGL · Germany</div><h4>Coffee-based drinks</h4><p>Chilled coffee drinks in carton.</p><div class="fmt">TT 250 Midi</div></div>
+      <div class="case"><div class="who">Meiji · Japan</div><h4>Coffee latte</h4><p>Converted from glass to carton for sustainability and differentiation, with a lower CO2 footprint.</p><div class="fmt">TT 200 Mini</div></div>
+      <div class="case"><div class="who">NÖM · Austria</div><h4>Iced coffee</h4><p>A family-sized chilled iced coffee.</p><div class="fmt">TT 500 Base</div></div>
+      <div class="case"><div class="who">Megmilk · Japan</div><h4>Protein milk for the elderly</h4><p>A functional protein-enriched milk for seniors who want to maintain their physical strength.</p><div class="fmt">TT 250 Midi</div></div>
+    </div>
+
+    <div class="grid g3 r43" style="margin-top:36px">
+      <figure><button class="ph" data-cap="Chilled Innovation Spotlight: fermented products (Danone, Mlekpol, C.Le Latte, Vindija)"><img src="img/l04.jpg" alt="Slide with 4 fermented product cases" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Chilled Innovation Spotlight: NÖM, Meiji, Danone, mMilk"><img src="img/l06.jpg" alt="Two screens showing innovation cases" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Zervin Rana in the session: growing with new flavours and recipes beyond the mainstream"><img src="img/l12.jpg" alt="Presenter beside a slide of coffee and protein milk cases" loading="lazy"></button></figure>
+    </div>
+
+    <!-- particles -->
+    <div class="split">
+      <div class="body">
+        <div class="eyebrow">Premiumisation</div>
+        <h3>Particles turn a drink into a snack</h3>
+        <p>"Add particles to premiumise products in Tetra Top" was the message: particle size, particle quantity, and soft fruit pieces and cereals turn beverages into portion-sized snacks or meal replacements. The slide put a price on it, using chilled drinking yoghurt (CDY) retail prices in China.</p>
+        <div class="figs">
+          <div class="fig"><div class="k">CDY plain</div><div class="v">16.7<small>RMB / litre</small></div></div>
+          <div class="fig hi"><div class="k">CDY with particles</div><div class="v">27<small>RMB / litre</small></div></div>
+        </div>
+        <p class="cap" style="margin-top:12px">That is about 62% more per litre for the version with particles.</p>
+      </div>
+      <figure><button class="ph" style="aspect-ratio:4/3" data-cap="Add particles to premiumise products in Tetra Top"><img src="img/l20.jpg" alt="Slide showing particle sizes and price per litre" loading="lazy"></button></figure>
+    </div>
+
+    <div class="split rev">
+      <div class="body">
+        <div class="eyebrow">Benchmark on screen</div>
+        <h3>Pieno Žvaigždės against Yili</h3>
+        <p>A side-by-side of particles strained from two drinks: Yili's popping-bead yoghurt from China and Pieno Žvaigždės' <i>Miau Bubble Tea</i> from Lithuania. The particles were laid out on a grid in 3 bands: 1 to 4 mm, 5 to 9 mm and 10 to 15 mm.</p>
+        <p>The slide's finding: higher viscosity and more particles in Pieno Žvaigždės compared with Yili.</p>
+        <p>The Miau pack itself came round the table: a limited-edition 500 g yogurt drink in forest berries, made in Kaunas, with 1.3% fat and bubble-tea pearls.</p>
+      </div>
+      <figure><button class="ph" style="aspect-ratio:4/3" data-cap="Comparison with Yili ADY: higher viscosity and more particles in Pieno Žvaigždės"><img src="img/l21.jpg" alt="Particles laid out on a measurement grid" loading="lazy"></button></figure>
+    </div>
+    <div class="grid g4 r34">
+      <figure><button class="ph" data-cap="Pieno Žvaigždės Miau Bubble Tea, forest berries, 500 g"><img src="img/l25.jpg" alt="Miau Bubble Tea yogurt drink carton" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Miau Bubble Tea, Lithuanian pack"><img src="img/l23.jpg" alt="Miau Bubble Tea carton, Lithuanian label" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Miau Bubble Tea back panel: 1.3% fat, made by Pieno Žvaigždės, Kaunas"><img src="img/l22.jpg" alt="Back of Miau carton with ingredients" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="The particle comparison being presented"><img src="img/l16.jpg" alt="Presenter pointing to particles on screen" loading="lazy"></button></figure>
+    </div>
+
+    <!-- protein -->
+    <div class="split">
+      <figure><div class="grid g2 r34">
+        <button class="ph" data-cap="Valio PROfeel Protein Milkshake, pear & vanilla: 25 g protein, no added sugar, lactose free"><img src="img/l10.jpg" alt="Valio PROfeel pear and vanilla milkshake" loading="lazy"></button>
+        <button class="ph" data-cap="Lindahls Protein+ Chocolate Crush: 26 g protein, 330 ml, lactose free, 0.7% fat"><img src="img/l14.jpg" alt="Lindahls Protein+ carton" loading="lazy"></button>
+      </div></figure>
+      <div class="body">
+        <div class="eyebrow">Protein in a carton</div>
+        <h3>The protein shakes on the table</h3>
+        <ul class="facts">
+          <li><b>Valio PROfeel Protein Milkshake</b> (Finland): 25 g protein per serving, no added sugar, vitamin D, lactose free. Seen in strawberry ice cream, chocolate, and a new pear and vanilla. The chocolate pack is 250 ml and sweetened with acesulfame K and sucralose; the strawberry pack states its cap is made of 30% recycled material.</li>
+          <li><b>Lindahls Protein+ Chocolate Crush</b>: 26 g protein, 330 ml, lactose free, 0.7% fat, with BCAA.</li>
+          <li><b>Skånemejerier Drick Yoghurt</b> (Sweden): strawberry, 0.8% fat, 330 ml.</li>
+          <li><b>Just Water</b>: 100% spring water in a carton, showing the format reaching beyond dairy.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid g4 r34">
+      <figure><button class="ph" data-cap="Valio PROfeel Protein Milkshake, strawberry ice cream flavour"><img src="img/l07.jpg" alt="Valio PROfeel strawberry milkshake" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Valio PROfeel Protein Milkshake, chocolate"><img src="img/l15.jpg" alt="Valio PROfeel chocolate milkshake" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="PROfeel back panel: ingredients in 5 languages, 250 ml"><img src="img/l13.jpg" alt="Back of PROfeel carton with ingredients" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Skånemejerier Drick Yoghurt and Just Water in carton"><img src="img/l03.jpg" alt="Just Water and Skånemejerier yoghurt cartons" loading="lazy"></button></figure>
+    </div>
+    <div class="grid g4 r34" style="margin-top:18px">
+      <figure><button class="ph" data-cap="Lindahls Protein+ Chocolate Crush, 26 g protein, 330 ml"><img src="img/l09.jpg" alt="Lindahls Protein+ Chocolate Crush, 26 g protein, 330 ml" loading="lazy"></button></figure><figure><button class="ph" data-cap="Valio PROfeel back panel, opened at the table"><img src="img/l11.jpg" alt="Valio PROfeel back panel, opened at the table" loading="lazy"></button></figure><figure><button class="ph" data-cap="Valio PROfeel, tasted during the session"><img src="img/l17.jpg" alt="Valio PROfeel, tasted during the session" loading="lazy"></button></figure><figure><button class="ph" data-cap="Lindahls Protein+, opened at the table"><img src="img/l18.jpg" alt="Lindahls Protein+, opened at the table" loading="lazy"></button></figure>
+    </div>
+    <div class="insight">
+      <div class="eyebrow">What the session showed</div>
+      <h3>How yoghurt markets evolve</h3>
+      <div class="cols">
+        <div><h4>The global path</h4><ul class="facts" style="margin-top:0">
+          <li>Plain yoghurt, then plain drinkable, then creamier drinkable, then spoonable.</li>
+          <li>India runs the other way: set dahi first, with lassi alongside.</li>
+          <li>Latin America: drinkable is huge and leads innovation.</li>
+          <li>USA: Greek yoghurt drove a boom over 10 to 15 years.</li></ul></div>
+        <div><h4>Ambient in China</h4><ul class="facts" style="margin-top:0">
+          <li>About 50 Tetra Top machines with Yili and Mengniu, about 1.5 bn packs.</li>
+          <li>Heat-treated after fermentation, stable at pH 4.2 to 4.4 in a foil-lined pack.</li>
+          <li>Built on a cultural preference for room-temperature drinks and costly inland cold chains.</li>
+          <li>Ambient yoghurt with inclusions sells above 40 RMB.</li></ul></div>
+        <div><h4>Protein and taste</h4><ul class="facts" style="margin-top:0">
+          <li>Valio, Lindahls and Danone lead with 25 to 26 g protein per pack.</li>
+          <li>Scandinavian products are deliberately less sweet; the Dinshaw's team found the sweetness right.</li>
+          <li>Pear and vanilla, a local favourite, was a flavour not seen in India.</li>
+          <li>The protein case is stronger in India, where vegetarian diets leave a protein gap.</li></ul></div>
+      </div>
+      <h3 style="margin-top:32px">Agreed next steps</h3>
+      <ul class="facts">
+        <li>Dinshaw's to send measurable requirements: products, raw-milk bacterial load, target shelf life, pack format and inclusion sizes.</li>
+        <li>Tetra Pak to propose the full line, from processing to distribution.</li>
+        <li>Test viscosity and shelf life at the Product Development Centre, including a 60-day run at 10 to 14°C.</li>
+        <li>A dedicated market intelligence session on yoghurt and fermented trends, with costing support up to full concept development.</li>
+      </ul>
+    </div>
+
+    <figure class="bleed"><button class="ph" data-cap="A chilled carton portfolio on screen: sour cream, kefir, laban, ricotta, rice pudding, protein yoghurt and more"><img src="img/l24.jpg" alt="Presenter pointing to a screen of chilled carton products" loading="lazy"></button>
+      <figcaption>A chilled portfolio in cartons: sour cream with active probiotics, spoonable kefir, laban, ricotta, rice pudding, a 20 g protein dessert, strawberry protein yoghurt and a coconut yoghurt.</figcaption></figure>
+  </div>
+</section>
+
+<!-- 3 PROCESS -->
+<section class="ch" id="process" style="padding-top:32px">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 3</div><h2>How Yoghurt Is Made</h2></div>
+      <p class="intro">The second session, "Best-practice lines for yoghurt production", went through the process step by step, from raw milk to cold store, with the equipment on the wall outside.</p>
+    </div>
+
+    <figure class="bleed" style="margin-top:0"><button class="ph" data-cap="Best-practice lines for yoghurt production, October 2026"><img src="img/p07.jpg" alt="Meeting room with two screens showing the session title" loading="lazy"></button></figure>
+
+    <div class="eyebrow">The yoghurt process</div>
+    <h3 style="margin-top:8px;font-size:1.9rem;font-weight:300">5 types of yoghurt product</h3>
+    <p class="muted" style="max-width:62ch;margin-top:10px">All 5 share the same front end: raw milk, fat standardisation, dry-matter increase, yoghurt milk treatment and starter addition. They split after that.</p>
+    <div class="types">
+      <div><b>Set</b><span>Heated, flavoured and filled, then fermented in the pack</span></div>
+      <div><b>Stirred</b><span>Fermented, smoothed, cooled, flavoured, filled</span></div>
+      <div><b>Drink</b><span>Fermented, viscosity reduced, cooled, filled</span></div>
+      <div><b>Concentrated</b><span>Fermented, concentrated, cooled, filled</span></div>
+      <div><b>Ambient</b><span>Final heat treatment after fermentation, stored ambient</span></div>
+    </div>
+
+    <div class="split">
+      <figure><button class="ph" style="aspect-ratio:4/3" data-cap="Yoghurt producers of the world: 8 regional varieties"><img src="img/p06.jpg" alt="World map slide of 8 yoghurt varieties" loading="lazy"></button></figure>
+      <div class="body">
+        <div class="eyebrow">Yoghurt producers of the world</div>
+        <h3>8 regional varieties</h3>
+        <p>Asked on the slide: which of these will inspire your next product innovation?</p>
+      </div>
+    </div>
+    <div class="varieties">
+      <div class="var"><span class="o">Iceland</span><b>Skyr</b><p>Nearly 1,000 years old. Firm, high protein, low fat; concentrated with filter or separator after fermentation.</p></div>
+      <div class="var"><span class="o">Central Europe</span><b>Quark</b><p>Must contain at least 73% water under German regulations; concentrated after fermentation to raise protein.</p></div>
+      <div class="var"><span class="o">Russia</span><b>Kefir</b><p>Yeasty, slightly carbonated; started with reusable kefir grains.</p></div>
+      <div class="var"><span class="o">Japan</span><b>Yakult</b><p>Contains 40 billion lactobacilli shirota per serving; sold as drink shots.</p></div>
+      <div class="var"><span class="o">India / Pakistan</span><b>Lassi</b><p>Sweetened, often flavoured with juice or spices such as cumin, cardamom, cinnamon, ginger and chilli; chilled or ambient.</p></div>
+      <div class="var"><span class="o">Middle East</span><b>Ayran</b><p>Contains about 1% salt, added after fermentation; a drink.</p></div>
+      <div class="var"><span class="o">United States</span><b>Sour cream</b><p>North America consumes about 80 million kg a year; thick, high fat, often fermented in the package.</p></div>
+      <div class="var"><span class="o">China</span><b>Ambient yoghurt</b><p>Shelf life of 4 to 12 months with no refrigeration, through heat treatment after fermentation.</p></div>
+    </div>
+
+    <div class="split rev">
+      <figure><button class="ph" style="aspect-ratio:4/3" data-cap="Quality considerations of yoghurt products"><img src="img/p08.jpg" alt="Slide on quality considerations" loading="lazy"></button></figure>
+      <div class="body">
+        <div class="eyebrow">Quality</div>
+        <h3>What makes or breaks a yoghurt</h3>
+        <ul class="facts">
+          <li><b>Sensory:</b> texture and viscosity, mouthfeel, taste.</li>
+          <li><b>Shelf-life limits:</b> yeast and moulds, post-acidification, separation and syneresis.</li>
+          <li><b>Levers for both:</b> formulation, process design and operation, and choice of culture.</li>
+        </ul>
+        <p style="margin-top:14px">The line diagram that followed carried the headline "Every step can impact the quality", with each station on it marked for its effect.</p>
+      </div>
+    </div>
+
+    <!-- concentration -->
+    <div class="split">
+      <div class="body">
+        <div class="eyebrow">Concentration</div>
+        <h3>Minimise raw material cost and acid whey</h3>
+        <p>For high-protein products such as skyr and Greek-style yoghurt, the yoghurt is concentrated after fermentation. 2 routes were compared for making 1,000 kg of 10% protein product per hour from 3.5% protein milk.</p>
+        <div class="conc" role="group" aria-label="Separator versus ultrafilter">
+          <div class="conc-row"><div class="lbl">Nozzle separator</div>
+            <div class="bars">
+              <div class="bar"><span class="b" style="width:100%"></span><span class="t">Feed 3,031 kg/h</span></div>
+              <div class="bar"><span class="b w" style="width:67%"></span><span class="t">Whey 2,031 kg/h · 0.3% protein</span></div>
+            </div></div>
+          <div class="conc-row"><div class="lbl">Ultrafilter</div>
+            <div class="bars">
+              <div class="bar"><span class="b" style="width:94.3%"></span><span class="t">Feed 2,857 kg/h</span></div>
+              <div class="bar"><span class="b w" style="width:61.3%"></span><span class="t">Whey 1,857 kg/h · 0% protein</span></div>
+            </div></div>
+          <p class="note">Same output from both. The ultrafilter route needs 174 kg/h less milk and produces 174 kg/h less acid whey, because no protein is lost in its whey.</p>
+        </div>
+      </div>
+      <figure><button class="ph" style="aspect-ratio:4/3" data-cap="Concentration: nozzle separator versus ultrafilter"><img src="img/p12.jpg" alt="Slide comparing nozzle separator and ultrafilter yields" loading="lazy"></button></figure>
+    </div>
+
+    <div class="grid g3 r43">
+      <figure><button class="ph" data-cap="Production of yoghurt: every step can impact the quality"><img src="img/p11.jpg" alt="Process line diagram with marked stations" loading="lazy"></button><figcaption><b>Every step counts.</b> The full stirred-yoghurt line, from powder and standardised milk to cold store.</figcaption></figure>
+      <figure><button class="ph" data-cap="Concentration: centrifugal separator line"><img src="img/p13.jpg" alt="Separator line diagram" loading="lazy"></button><figcaption><b>Separator line.</b> Yoghurt milk pasteurised at 95°C for 5 minutes, fermented, then split into concentrate and whey.</figcaption></figure>
+      <figure><button class="ph" data-cap="Concentration: ultrafiltration line"><img src="img/p14.jpg" alt="Ultrafiltration line diagram" loading="lazy"></button><figcaption><b>Ultrafiltration line.</b> Fermented yoghurt is thermised, concentrated on the UF plant, cooled and filled.</figcaption></figure>
+      <figure><button class="ph" data-cap="Production line for drink yoghurt"><img src="img/p21.jpg" alt="Drink yoghurt line diagram" loading="lazy"></button><figcaption><b>Drink yoghurt.</b> Pre-treatment, culture, incubation, stabiliser and sugar, homogenisation, cooling, aroma, filling.</figcaption></figure>
+      <figure><button class="ph" data-cap="In-line fruit dosing unit: the challenges"><img src="img/p15.jpg" alt="Fruit dosing unit schematic" loading="lazy"></button><figcaption><b>In-line fruit dosing.</b> Fruit dosed between the yoghurt buffer and the filler, with sterile air or nitrogen and its own cleaning circuit.</figcaption></figure>
+      <figure><button class="ph" data-cap="The yoghurt process: 5 types of yoghurt products"><img src="img/p05.jpg" alt="Slide of 5 yoghurt process routes" loading="lazy"></button><figcaption><b>5 routes.</b> The branching flowchart behind the 5 product types.</figcaption></figure>
+    </div>
+
+    <div class="split rev">
+      <figure><button class="ph" style="aspect-ratio:4/3" data-cap="Products on the rise: high-protein products, ambient yoghurt, good for you"><img src="img/p10.jpg" alt="Presenter in front of a slide on products on the rise" loading="lazy"></button></figure>
+      <div class="body">
+        <div class="eyebrow">Market direction</div>
+        <h3>Products on the rise</h3>
+        <ul class="facts">
+          <li>Spoonable and drinkable high-protein products.</li>
+          <li>Ambient yoghurt.</li>
+          <li>Products for specific target groups, such as people on GLP-1 diets, and products with creatine.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid g2 r43">
+      <figure><button class="ph" data-cap="The process equipment wall: blending, CIP, homogenisation, standardisation, pasteurisation, aseptic buffering, UHT, heat transfer, separation, dosing"><img src="img/p04.jpg" alt="Wall graphic of dairy process equipment" loading="lazy"></button><figcaption>The equipment wall: blending, CIP, homogenisation, standardisation, pasteurisation, aseptic buffering, UHT, heat transfer, separation and dosing.</figcaption></figure>
+      <figure><button class="ph" data-cap="The session room, with the product shelf on the wall"><img src="img/p03.jpg" alt="Session room with product samples on a table" loading="lazy"></button><figcaption>The session room, with samples laid out and a product shelf on the wall.</figcaption></figure>
+    </div>
+    <div class="grid g3 r43" style="margin-top:18px">
+      <figure><button class="ph" data-cap="Production of yoghurt: every step can impact the quality"><img src="img/p09.jpg" alt="Production of yoghurt: every step can impact the quality" loading="lazy"></button></figure><figure><button class="ph" data-cap="Concentration: minimise raw material cost and acid whey volumes"><img src="img/p16.jpg" alt="Concentration: minimise raw material cost and acid whey volumes" loading="lazy"></button></figure><figure><button class="ph" data-cap="The production line diagram, on both screens"><img src="img/p19.jpg" alt="The production line diagram, on both screens" loading="lazy"></button></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 TASTING -->
+<section class="ch" id="tasting">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 4</div><h2>On the Table</h2></div>
+      <p class="intro">Nordic high-protein and fermented products were opened at the table during the yoghurt session. Figures below are as printed on each pack.</p>
+    </div>
+
+    <div class="tasting">
+      <article class="taste">
+        <div class="pics">
+          <button class="ph" data-cap="Arla Superkrämig Grekisk Yoghurt Naturell, 0% fat"><img src="img/p18.jpg" alt="Arla Greek yoghurt tub" loading="lazy"></button>
+          <button class="ph" data-cap="Arla Grekisk Yoghurt nutrition panel"><img src="img/p17.jpg" alt="Nutrition panel of Arla Greek yoghurt" loading="lazy"></button>
+        </div>
+        <div>
+          <div class="origin">Arla · Sweden · Greek-style</div>
+          <h3>Superkrämig Grekisk Yoghurt Naturell</h3>
+          <p class="claim">0% fat, rich in protein</p>
+          <p style="margin-top:10px">Ingredients are just milk, milk protein and yoghurt cultures. The milk is high-pasteurised; keep at 8°C or below.</p>
+          <table class="nut"><caption>Per 100 g</caption>
+            <tr><td>Energy</td><td>250 kJ / 59 kcal</td></tr>
+            <tr><td>Protein</td><td>9.5 g</td></tr>
+            <tr><td>Fat</td><td>0.2 g</td></tr>
+            <tr><td>Carbohydrate (of which sugars)</td><td>4.0 g (4.0 g)</td></tr>
+            <tr><td>Salt</td><td>0.14 g</td></tr>
+          </table>
+        </div>
+      </article>
+
+      <article class="taste">
+        <div class="pics">
+          <button class="ph" data-cap="ProPud LyxKvarg, Mormors bärkompott: 20 g protein, no added sugar, lactose free"><img src="img/p24.jpg" alt="ProPud LyxKvarg tub" loading="lazy"></button>
+          <button class="ph" data-cap="ProPud LyxKvarg side panel: NJIE Foods AB, Göteborg"><img src="img/p20.jpg" alt="Side of ProPud tub" loading="lazy"></button>
+        </div>
+        <div>
+          <div class="origin">ProPud by NJIE Foods · Göteborg, Sweden · Quark</div>
+          <h3>LyxKvarg, Mormors Bärkompott</h3>
+          <p class="claim">20 g protein, no added sugar, lactose free</p>
+          <p style="margin-top:10px">A luxury quark with a berry compote. The pack copy opens with "Life is too short for rough quark" and promises an extra creamy, full texture. Keep at 8°C or below; eat within 2 days of opening.</p>
+        </div>
+      </article>
+
+      <article class="taste">
+        <div class="pics one">
+          <button class="ph" data-cap="Valio PROfeel Proteiinirahka, mango"><img src="img/p22.jpg" alt="Valio PROfeel protein quark tub, opened" loading="lazy"></button>
+        </div>
+        <div>
+          <div class="origin">Valio · Finland · Quark</div>
+          <h3>PROfeel Proteiinirahka, Mango</h3>
+          <p class="claim">Protein quark in a foil-sealed tub</p>
+          <p style="margin-top:10px">The quark from Valio's PROfeel protein line, the same line as the protein milkshakes in Chapter 2.</p>
+        </div>
+      </article>
+
+      <article class="taste">
+        <div class="pics">
+          <button class="ph" data-cap="Valio Kefir Hallon (raspberry), lactose free, with LGG culture"><img src="img/p27.jpg" alt="Valio raspberry kefir carton" loading="lazy"></button>
+          <button class="ph" data-cap="Valio Kefir: 2.5 billion LGG per 250 ml portion; protein, calcium, vitamin B12"><img src="img/p23.jpg" alt="Side panel of Valio kefir" loading="lazy"></button>
+        </div>
+        <div>
+          <div class="origin">Valio · made in Finland for Sweden · Kefir</div>
+          <h3>Kefir Hallon</h3>
+          <p class="claim">Lactose free, with the LGG® culture</p>
+          <p style="margin-top:10px">One 250 ml portion carries 2.5 billion LGG® bacteria. The pack calls out protein, calcium and vitamin B12. 1.3% fat, 4.5% sugar, and a cap made of 30% recycled plastic.</p>
+          <table class="nut"><caption>Per 100 ml</caption>
+            <tr><td>Energy</td><td>251 kJ / 59 kcal</td></tr>
+            <tr><td>Protein</td><td>3.3 g</td></tr>
+            <tr><td>Fat</td><td>1.3 g</td></tr>
+            <tr><td>Carbohydrate (of which sugars)</td><td>7.9 g (7.5 g)</td></tr>
+            <tr><td>Lactose</td><td>0 g</td></tr>
+          </table>
+        </div>
+      </article>
+
+      <article class="taste">
+        <div class="pics">
+          <button class="ph" data-cap="Arla Cultura Profibi Hallon: drinking fermented milk with fibre, lactose free"><img src="img/p30.jpg" alt="Arla Cultura Profibi bottle" loading="lazy"></button>
+          <button class="ph" data-cap="Arla Cultura Profibi: 330 ml, 1.4% fat, ingredients and nutrition"><img src="img/p26.jpg" alt="Back of Arla Cultura bottle" loading="lazy"></button>
+        </div>
+        <div>
+          <div class="origin">Arla · Sweden · Drinking fermented milk</div>
+          <h3>Cultura Profibi Hallon</h3>
+          <p class="claim">"Keeps the stomach in balance"</p>
+          <p style="margin-top:10px">A lactose-free raspberry <i>drickfil</i> with 8 selected bacterial cultures, fibre, vitamin D, calcium and protein. 330 ml bottle, 1.4% fat, 3.6% sugar.</p>
+          <table class="nut"><caption>Per 100 ml</caption>
+            <tr><td>Energy</td><td>265 kJ / 63 kcal</td></tr>
+            <tr><td>Protein</td><td>3.3 g</td></tr>
+            <tr><td>Fat</td><td>1.4 g</td></tr>
+            <tr><td>Carbohydrate (of which sugars)</td><td>8.0 g (7.6 g)</td></tr>
+            <tr><td>Fibre</td><td>1.3 g</td></tr>
+          </table>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid g4 r34" style="margin-top:56px">
+      <figure><button class="ph" data-cap="Valio Kefir nutrition and ingredients"><img src="img/p25.jpg" alt="Valio kefir nutrition panel" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Valio Kefir Hallon, front"><img src="img/p28.jpg" alt="Valio kefir carton front" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Arla Cultura Profibi, back label"><img src="img/p31.jpg" alt="Arla Cultura back label" loading="lazy"></button></figure>
+      <figure><button class="ph" data-cap="Arla Cultura Profibi, 330 ml, 1.4% fat"><img src="img/p29.jpg" alt="Arla Cultura bottle barcode side" loading="lazy"></button></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 DINNER -->
+<section class="ch" id="dinner">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 5</div><h2>The Dinner Table</h2></div>
+      <p class="intro">Over dinner the conversation moved from the plant to the market: where the white space sits in Indian dairy, what makes a line pay, and where ice cream and cheese are heading.</p>
+    </div>
+    <ol class="heads">
+      <li><b>Drinkable is the gap</b><span>Lassi is the mass-market entry route, with drinkable yoghurt as a premium layer once consumers are ready.</span></li>
+      <li><b>UHT pays at volume</b><span>A UHT line needs about 17 hours a day of production as a bare minimum.</span></li>
+      <li><b>Naming drives adoption</b><span>Probiotic curd, high-protein skyr and lassi are clearer labels than "yoghurt".</span></li>
+      <li><b>Shelf-life sweet spot of 40 to 60 days</b><span>Design for 60, declare 40, so the retailer gets about 30 days on shelf.</span></li>
+      <li><b>Repeatability is the next milestone</b><span>The drinkable test batch succeeded once, which proves the product is achievable.</span></li>
+      <li><b>Cheese is structural growth</b><span>Cheddar is expected to double by 2030, and cheese also absorbs surplus flush-season milk.</span></li>
+      <li><b>Ice cream will differentiate on format</b><span>Extrusion shapes and stickless bars are hard to copy; inclusions are not.</span></li>
+    </ol>
+    <div class="insight">
+      <div class="cols">
+        <div><h4>The UHT line</h4><ul class="facts" style="margin-top:0">
+          <li>Runs flavoured milk, milk, high-protein milk, drinking yoghurt and buttermilk.</li>
+          <li>About 6,000 litres go to drain at each start before the line stabilises.</li>
+          <li>Heat can denature protein and create a burnt note; the first sip decides acceptance.</li>
+          <li>Parameters are fixed at design; changing them later means recirculation and about 3 hours of CIP.</li></ul></div>
+        <div><h4>Drinkable yoghurt</h4><ul class="facts" style="margin-top:0">
+          <li>About 50% of yoghurt in Europe is drunk, against about 15% set or stirred.</li>
+          <li>Lassi sells at about Rs 25 per 200 ml; a drinkable at about Rs 50 needs clear added value.</li>
+          <li>Raw milk of good quality is a prerequisite, and Dinshaw's has it.</li>
+          <li>Target consumer: high protein, low fat.</li></ul></div>
+        <div><h4>Shelf life and process</h4><ul class="facts" style="margin-top:0">
+          <li>A 3 to 4 month high-protein product needs sterilisation at about 105°C or more, which affects taste.</li>
+          <li>Extended-life lassi at 40 to 60 days opens Mumbai and other markets.</li>
+          <li>Skyr is not UHT: separation or UF, to be recommended by Tetra Pak.</li>
+          <li>Agreed sequence: fix consistency, taste and flavour first, then select the process.</li></ul></div>
+        <div><h4>Cheese and surplus milk</h4><ul class="facts" style="margin-top:0">
+          <li>Powder and cheese are the 2 outlets for flush-season milk, each with about 1 year of shelf life.</li>
+          <li>A cheese plant needs about 3 lakh litres a day and 30 to 40 days of ripening.</li>
+          <li>B2B cheese buyers book 3 to 4 months ahead.</li></ul></div>
+        <div><h4>Ice cream formats</h4><ul class="facts" style="margin-top:0">
+          <li>Stickless bars and mini bites grew from about 4 to 5% to about 7 to 8% of the market in 4 to 5 years.</li>
+          <li>India's paper take-home tubs are expected to move to IML.</li>
+          <li>About 95% of volume still comes from regular products.</li></ul></div>
+        <div><h4>Paneer technology</h4><ul class="facts" style="margin-top:0">
+          <li>Only 3 continuous lines existed globally, from Obram: 2 at Amul and 1 in Canada.</li>
+          <li>Tetra Pak has spent 2 to 3 years combining continuous curd making with block forming.</li>
+          <li>The technology was adapted from European cottage cheese.</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 NOTEBOOK -->
+<section class="notebook" id="notebook">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 6</div><h2>The Night Session</h2></div>
+      <p class="intro">A late-evening working session in which Zervin Rana walked through Dinshaw's draft product definitions, shelf-life targets, fruit needs and process flows for the new yoghurt plant. This is the requirements list Tetra Pak asked for.</p>
+    </div>
+
+    <div class="brief">
+      <div>
+        <h4>Shelf-life goal</h4>
+        <p class="big">A <em>45-day</em> product, designed for <em>60 days</em> at 4°C.</p>
+        <p class="muted" style="margin-top:10px">Within Dinshaw's it will be held under 4°C. After it leaves the plant, 10 to 12°C may be the temperature, so it should last 15 days after leaving the plant.</p>
+      </div>
+      <div>
+        <h4>Product slate</h4>
+        <ul class="facts" style="margin-top:0">
+          <li>Set curd / dahi</li>
+          <li>Greek yoghurt: protein 7 to 8%, fat under 2%</li>
+          <li>Skyr: protein 10 to 12%, fat under 1%</li>
+          <li>Lassi</li>
+          <li>Drinkable yoghurt</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Open questions</h4>
+        <ul class="facts" style="margin-top:0">
+          <li>Fruit pieces of 8 to 10 mm: berries, nuts, seeds, strawberry.</li>
+          <li>How will dry fruit be handled? How will fruit prep be handled?</li>
+          <li>Raw milk bacterial load, to be provided by Verma sir, decides between Bactofuge and microfiltration.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flows">
+      <div class="flow">
+        <h3>Dahi</h3>
+        <div class="base">Standardised milk · F 3.5% · P 4.5% · RO</div>
+        <ol>
+          <li>Bactofuge, homogenise, pasteurise</li>
+          <li>Chill to 45°C</li>
+          <li>Add culture</li>
+          <li class="key">Fill in cups</li>
+          <li>Incubate in the cup</li>
+          <li>Blast freeze</li>
+          <li>Finished goods store at 4°C</li>
+        </ol>
+        <button class="ph" data-cap="Notebook: dahi process"><img src="img/dahi.jpg" alt="Handwritten dahi process" loading="lazy"></button>
+      </div>
+      <div class="flow">
+        <h3>Greek Yoghurt</h3>
+        <div class="base">Standardised milk · P 8% · RO / UF</div>
+        <ol>
+          <li>Bactofuge, homogenise, pasteurise</li>
+          <li>Chill to 45°C</li>
+          <li>Add culture and ferment</li>
+          <li>Break curd</li>
+          <li class="key">Strain whey by filtration or nozzle separator</li>
+          <li>Whisk; add sugar and fruit paste</li>
+          <li>Thermise</li>
+          <li>Fill in cups, fruit via PCM dosing</li>
+        </ol>
+        <button class="ph" data-cap="Notebook: Greek yoghurt process"><img src="img/greek_yogurt.jpg" alt="Handwritten Greek yoghurt process" loading="lazy"></button>
+      </div>
+      <div class="flow">
+        <h3>Skyr</h3>
+        <div class="base">Skimmed milk · F 0.5%</div>
+        <ol>
+          <li>Bactofuge and pasteurise</li>
+          <li>Add culture and rennet</li>
+          <li>Ferment</li>
+          <li class="key">Strain whey mechanically by filtration or nozzle separation</li>
+          <li>Whisk drained curd until smooth and creamy</li>
+          <li>Add sugar and fruit paste</li>
+          <li>Thermise</li>
+          <li>Fill cups, fruit dice added</li>
+        </ol>
+        <button class="ph" data-cap="Notebook: skyr process"><img src="img/skyrr.jpg" alt="Handwritten skyr process" loading="lazy"></button>
+      </div>
+      <div class="flow">
+        <h3>Lassi</h3>
+        <div class="base">Standardised milk · recipe-wise</div>
+        <ol>
+          <li>Bactofuge, homogenise, pasteurise</li>
+          <li>Chill to 45°C</li>
+          <li>Add culture and ferment</li>
+          <li class="key">Break curd and add sugar</li>
+          <li>Thermise</li>
+          <li>Add flavour</li>
+          <li>Fill</li>
+        </ol>
+        <button class="ph" data-cap="Notebook: lassi process"><img src="img/lassi.jpg" alt="Handwritten lassi process" loading="lazy"></button>
+      </div>
+    </div>
+
+    <div class="insight" style="margin-top:56px">
+      <div class="eyebrow">Also from the night session</div>
+      <ul class="facts" style="margin-top:0">
+        <li><b>Regulatory headroom:</b> Codex requires at least 2.7% protein for yoghurt and 5.6% for a concentrated fermented milk, so the Greek yoghurt and skyr targets clear the bar comfortably.</li>
+        <li><b>Live-culture claim:</b> the draft flows thermise Greek yoghurt, skyr and lassi, so a "live" or probiotic claim would need cultures added after heat treatment.</li>
+        <li><b>Fruit and texture:</b> pieces up to 8 mm pair with thinner yoghurt and up to 10 mm with thicker yoghurt, so fruit size and texture are specified together.</li>
+        <li><b>Reading future consumers:</b> AI can project how a child aged 5 in 2026 will eat in 2040; the view is sharper for a state than for a country, but each level shows the direction, which is towards health.</li>
+      </ul>
+    </div>
+    <figure style="margin-top:56px"><button class="ph" style="aspect-ratio:16/10" data-cap="Notebook: the product brief"><img src="img/lists.jpg" alt="Handwritten product brief notes" loading="lazy"></button><figcaption>The brief, as written.</figcaption></figure>
+  </div>
+</section>
+
+<!-- 7 FACTORY -->
+<section class="ch" id="factory">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 7</div><h2>Inside Diplom-Is</h2></div>
+      <p class="intro">A walk through Diplom-Is at Gjelleråsen in Norway. Diplom-Is was established in 1930, is owned by TINE SA and has 4 subsidiaries. The visit went from the clean-zone entry, through the lines and robots, to palletising and the cold store.</p>
+    </div>
+    <div class="grid g3 r43">
+      <figure><button class="ph" data-cap="Diplom-Is, Gjelleråsen"><img src="img/g36.jpg" alt="Diplom-Is, Gjelleråsen" loading="lazy"></button><figcaption>Diplom-Is, Gjelleråsen</figcaption></figure><figure><button class="ph" data-cap="A Diplom-Is ice cream van at the site"><img src="img/g01.jpg" alt="A Diplom-Is ice cream van at the site" loading="lazy"></button><figcaption>A Diplom-Is ice cream van at the site</figcaption></figure><figure><button class="ph" data-cap="The history wall, starting from 1920"><img src="img/g21.jpg" alt="The history wall, starting from 1920" loading="lazy"></button><figcaption>The history wall, starting from 1920</figcaption></figure>
+    </div>
+
+    <p class="sub">The heritage corridor</p>
+    <p>Early equipment and vending machines are kept on display beside the history wall.</p>
+    <div class="grid g3 r34" style="margin-top:22px">
+      <figure><button class="ph" data-cap="Early processing equipment on display"><img src="img/g18.jpg" alt="Early processing equipment on display" loading="lazy"></button></figure><figure><button class="ph" data-cap="A Diplom-Is vending machine: "Hele Norges iskrem""><img src="img/g19.jpg" alt="A Diplom-Is vending machine: "Hele Norges iskrem"" loading="lazy"></button></figure><figure><button class="ph" data-cap="A vintage Diplom-Is vending machine"><img src="img/g20.jpg" alt="A vintage Diplom-Is vending machine" loading="lazy"></button></figure>
+    </div>
+    <div class="vids wide"><figure class="vid"><video controls playsinline preload="none" poster="vid/v01.jpg" src="vid/v01.mp4"></video><figcaption>Walking the history wall, 1920 to today</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w32.jpg" src="vid/w32.mp4"></video><figcaption>A quick vote on the flip chart: over or under</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w31.jpg" src="vid/w31.mp4"></video><figcaption>The Diplom-Is range in the freezer</figcaption></figure></div>
+
+    <p class="sub">Entering the clean zone</p>
+    <p>Visitors follow the site's HSE and hygiene rules before entering production.</p>
+    <div class="split" style="margin-block:28px 0">
+      <div class="grid g2 r34"><figure><button class="ph" data-cap="HSE and hygiene requirements for visitors, Gjelleråsen"><img src="img/g17.jpg" alt="HSE and hygiene requirements for visitors, Gjelleråsen" loading="lazy"></button></figure><figure><button class="ph" data-cap="Clothing for the clean zone: technical, production and lab"><img src="img/g16.jpg" alt="Clothing for the clean zone: technical, production and lab" loading="lazy"></button></figure></div>
+      <div class="body">
+        <ul class="facts" style="margin-top:0">
+          <li>Visitors wear a white coat, white shoe covers and red headgear that encloses all hair.</li>
+          <li>Hands are washed thoroughly before entering the clean zone.</li>
+          <li>Jewellery, watches and visible piercings are not allowed in production.</li>
+          <li>Visitors keep a minimum distance of 2 metres from open product.</li>
+          <li>Peanut-containing foods are not allowed in the building.</li>
+          <li>Children under 7 years are not allowed in the factory.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="vids"><figure class="vid"><video controls playsinline preload="none" poster="vid/v12.jpg" src="vid/v12.mp4"></video><figcaption>Boot washing at the hygiene entry</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w28.jpg" src="vid/w28.mp4"></video><figcaption>Through the boot brush station</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w29.jpg" src="vid/w29.mp4"></video><figcaption>Hand washing before the clean zone</figcaption></figure><figure><button class="ph" style="aspect-ratio:9/16" data-cap="Workwear dispenser at the clean-zone entry"><img src="img/g15.jpg" alt="Workwear dispenser" loading="lazy"></button><figcaption>The workwear dispenser.</figcaption></figure></div>
+
+    <p class="sub">On the lines</p>
+    <p>Filling, moulding, wrapping and robot packing, filmed on the walk-through.</p>
+    <div class="vids"><figure class="vid"><video controls playsinline preload="none" poster="vid/v02.jpg" src="vid/v02.mp4"></video><figcaption>Walking the line in the clean zone</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w11.jpg" src="vid/w11.mp4"></video><figcaption>A stick line in motion</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v15.jpg" src="vid/v15.mp4"></video><figcaption>The moulding carousel, explained on the floor</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v05.jpg" src="vid/v05.mp4"></video><figcaption>Cup filling</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v11.jpg" src="vid/v11.mp4"></video><figcaption>A Gram filler, and a cup from the line</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v07.jpg" src="vid/v07.mp4"></video><figcaption>The filling hall</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v13.jpg" src="vid/v13.mp4"></video><figcaption>Robot packing of chocolate tubs</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w18.jpg" src="vid/w18.mp4"></video><figcaption>Tubs moving to wrapping</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w19.jpg" src="vid/w19.mp4"></video><figcaption>Flow wrapping</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w22.jpg" src="vid/w22.mp4"></video><figcaption>A robot cell, filmed through the glass</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w21.jpg" src="vid/w21.mp4"></video><figcaption>Cartons formed and filled</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w24.jpg" src="vid/w24.mp4"></video><figcaption>Packs into cartons</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w25.jpg" src="vid/w25.mp4"></video><figcaption>Tubs into a case, then sealed</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v04.jpg" src="vid/v04.mp4"></video><figcaption>Hand packing into lined cases</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w07.jpg" src="vid/w07.mp4"></video><figcaption>The case packer</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v10.jpg" src="vid/v10.mp4"></video><figcaption>The quality check station</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v08.jpg" src="vid/v08.mp4"></video><figcaption>Conveyors, with emergency stops on every section</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v14.jpg" src="vid/v14.mp4"></video><figcaption>SpanTech conveyor belts</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w17.jpg" src="vid/w17.mp4"></video><figcaption>Conveyor junction</figcaption></figure></div>
+    <div class="grid g4 r34" style="margin-top:18px">
+      <figure><button class="ph" data-cap="A line with product on the conveyor"><img src="img/g08.jpg" alt="A line with product on the conveyor" loading="lazy"></button></figure><figure><button class="ph" data-cap="A Motoman robot cell"><img src="img/g09.jpg" alt="A Motoman robot cell" loading="lazy"></button></figure><figure><button class="ph" data-cap="A filling area"><img src="img/g12.jpg" alt="A filling area" loading="lazy"></button></figure><figure><button class="ph" data-cap="Moulding carousel"><img src="img/g06.jpg" alt="Moulding carousel" loading="lazy"></button></figure><figure><button class="ph" data-cap="A guarded machine on the platform"><img src="img/g10.jpg" alt="A guarded machine on the platform" loading="lazy"></button></figure><figure><button class="ph" data-cap="Machines on the upper level"><img src="img/g11.jpg" alt="Machines on the upper level" loading="lazy"></button></figure><figure><button class="ph" data-cap="The line and chest freezers"><img src="img/g13.jpg" alt="The line and chest freezers" loading="lazy"></button></figure><figure><button class="ph" data-cap="Pipework overhead"><img src="img/g14.jpg" alt="Pipework overhead" loading="lazy"></button></figure>
+    </div>
+
+    <p class="sub">Palletising and the cold store</p>
+    <p>Finished cases are palletised, wrapped and moved into cold storage.</p>
+    <div class="vids"><figure class="vid"><video controls playsinline preload="none" poster="vid/w03.jpg" src="vid/w03.mp4"></video><figcaption>A pallet entering the freezer door</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w06.jpg" src="vid/w06.mp4"></video><figcaption>Pallets on the Hpack conveyor</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w09.jpg" src="vid/w09.mp4"></video><figcaption>The Hpack palletising area</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w05.jpg" src="vid/w05.mp4"></video><figcaption>The Octopus Compact pallet wrapper</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w04.jpg" src="vid/w04.mp4"></video><figcaption>Through the cage</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w01.jpg" src="vid/w01.mp4"></video><figcaption>The cold store</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v03.jpg" src="vid/v03.mp4"></video><figcaption>Racked pallets and a forklift</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w10.jpg" src="vid/w10.mp4"></video><figcaption>The forklift line</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v06.jpg" src="vid/v06.mp4"></video><figcaption>Walking the warehouse with the guide</figcaption></figure></div>
+    <div class="grid g4 r34" style="margin-top:18px">
+      <figure><button class="ph" data-cap="Hpack palletising control panel"><img src="img/g03.jpg" alt="Hpack palletising control panel" loading="lazy"></button></figure><figure><button class="ph" data-cap="Hpack Palletizing Solutions"><img src="img/g04.jpg" alt="Hpack Palletizing Solutions" loading="lazy"></button></figure><figure><button class="ph" data-cap="Linde forklifts"><img src="img/g05.jpg" alt="Linde forklifts" loading="lazy"></button></figure><figure><button class="ph" data-cap="Pallet of packaging ready for the line"><img src="img/g07.jpg" alt="Pallet of packaging ready for the line" loading="lazy"></button></figure>
+    </div>
+
+    <div class="insight" style="margin-top:72px">
+      <div class="eyebrow">From the Diplom-Is report</div>
+      <h3>The numbers behind the factory</h3>
+      <p class="src">As printed in the Diplom-Is report shared during the visit</p>
+      <div class="figs four">
+        <div class="fig"><div class="k">Founded</div><div class="v">1930<small>owned by TINE SA</small></div></div>
+        <div class="fig"><div class="k">Turnover 2025</div><div class="v">1,366<small>NOK million</small></div></div>
+        <div class="fig"><div class="k">Workforce</div><div class="v">315<small>man-years</small></div></div>
+        <div class="fig hi"><div class="k">Energy use</div><div class="v">1.0<small>kWh / net kg, 2025</small></div></div>
+      </div>
+      <div class="cols">
+        <div><h4>Energy</h4><ul class="facts" style="margin-top:0">
+          <li>Specific energy fell from 1.2 (2023) to 1.1 (2024) to 1.0 kWh per net kg produced (2025).</li>
+          <li>Total energy use in 2025: 21,623 MWh.</li>
+          <li>Certified to FSSC 22000 and ISO 9001:2015.</li></ul></div>
+        <div><h4>2030 goals and status</h4><ul class="facts" style="margin-top:0">
+          <li>42% lower own emissions from 2020: reduced 15% so far.</li>
+          <li>25% less food waste from 2024: reduced 16.8%.</li>
+          <li>100% recyclable packaging: 94.5%.</li></ul></div>
+        <div><h4>People and products</h4><ul class="facts" style="margin-top:0">
+          <li>Sick leave target under 7%: 8.5%.</li>
+          <li>95% of SKUs within standard portions: 93%.</li>
+          <li>Subsidiaries: Plug-In Service, Isdalen, Kulinaris and Laguna Produkter.</li></ul></div>
+      </div>
+    </div>
+    <div class="grid g4 r43">
+      <figure><button class="ph" data-cap="About Diplom-Is"><img src="img/n21.jpg" alt="About Diplom-Is" loading="lazy"></button></figure><figure><button class="ph" data-cap="Energy use in production"><img src="img/n18.jpg" alt="Energy use in production" loading="lazy"></button></figure><figure><button class="ph" data-cap="Sustainability goals towards 2030"><img src="img/n32.jpg" alt="Sustainability goals towards 2030" loading="lazy"></button></figure><figure><button class="ph" data-cap="Climate accounting"><img src="img/n31.jpg" alt="Climate accounting" loading="lazy"></button></figure><figure><button class="ph" data-cap="Emissions target and status"><img src="img/n23.jpg" alt="Emissions target and status" loading="lazy"></button></figure><figure><button class="ph" data-cap="Packaging goals"><img src="img/n30.jpg" alt="Packaging goals" loading="lazy"></button></figure><figure><button class="ph" data-cap="Waste and recycling"><img src="img/n05.jpg" alt="Waste and recycling" loading="lazy"></button></figure><figure><button class="ph" data-cap="Workforce figures"><img src="img/n04.jpg" alt="Workforce figures" loading="lazy"></button></figure><figure><button class="ph" data-cap="Resource figures"><img src="img/n06.jpg" alt="Resource figures" loading="lazy"></button></figure><figure><button class="ph" data-cap="Resource figures, continued"><img src="img/n12.jpg" alt="Resource figures, continued" loading="lazy"></button></figure><figure><button class="ph" data-cap="Production photograph in the report"><img src="img/n13.jpg" alt="Production photograph in the report" loading="lazy"></button></figure><figure><button class="ph" data-cap="People and safety"><img src="img/n20.jpg" alt="People and safety" loading="lazy"></button></figure><figure><button class="ph" data-cap="Social responsibility"><img src="img/n03.jpg" alt="Social responsibility" loading="lazy"></button></figure><figure><button class="ph" data-cap="Strategy and goals overview"><img src="img/g32.jpg" alt="Strategy and goals overview" loading="lazy"></button></figure>
+    </div>
+    <div class="vids wide"><figure class="vid"><video controls playsinline preload="none" poster="vid/v17.jpg" src="vid/v17.mp4"></video><figcaption>Leafing through the report</figcaption></figure></div>
+  </div>
+</section>
+
+<!-- 8 SHELF -->
+<section class="ch band-sec" id="shelf">
+  <div class="wrap">
+    <div class="ch-head">
+      <div><div class="ch-num">Chapter 8</div><h2>On the Norwegian Shelf</h2></div>
+      <p class="intro">A walk through an Oslo supermarket: yoghurt, skyr, protein, butter, desserts and ice cream as Norwegian shoppers see them. Prices are in Norwegian kroner, as shown on the shelf.</p>
+    </div>
+
+    <p class="sub" style="margin-top:0">Yoghurt and skyr</p>
+    <div class="vids"><figure class="vid"><video controls playsinline preload="none" poster="vid/v18.jpg" src="vid/v18.mp4"></video><figcaption>TINE yoghurt in 1 kg cartons, berry and passion fruit cups</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v19.jpg" src="vid/v19.mp4"></video><figcaption>Greek-style, skyr and GO&#39;MORGEN, on a 3 for 2 offer</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v16.jpg" src="vid/v16.mp4"></video><figcaption>Crème fraîche and dairy cups</figcaption></figure><figure><button class="ph" style="aspect-ratio:9/16" data-cap="GO&#39;MORGEN mango and banana yoghurt with granola"><img src="img/n24.jpg" alt="GO&#39;MORGEN yoghurt" loading="lazy"></button><figcaption>GO&#39;MORGEN mango and banana yoghurt with granola.</figcaption></figure></div>
+    <div class="grid g4 r34" style="margin-top:18px">
+      <figure><button class="ph" data-cap="A twin-pot yoghurt with a separate topping"><img src="img/n15.jpg" alt="A twin-pot yoghurt with a separate topping" loading="lazy"></button></figure><figure><button class="ph" data-cap="The twin pot, side view"><img src="img/n16.jpg" alt="The twin pot, side view" loading="lazy"></button></figure><figure><button class="ph" data-cap="Chia pudding with raspberry, 210 g"><img src="img/n14.jpg" alt="Chia pudding with raspberry, 210 g" loading="lazy"></button></figure><figure><button class="ph" data-cap="Chia pudding, from the chilled cabinet"><img src="img/n27.jpg" alt="Chia pudding, from the chilled cabinet" loading="lazy"></button></figure>
+    </div>
+
+    <div class="split">
+      <div class="grid g2 r34"><figure><button class="ph" data-cap="YT Proteinpudding, chocolate: 20 g protein per cup"><img src="img/n17.jpg" alt="YT Proteinpudding, chocolate: 20 g protein per cup" loading="lazy"></button></figure><figure><button class="ph" data-cap="YT Proteinpudding label: ultra-pasteurised, homogenised and aseptically filled"><img src="img/n19.jpg" alt="YT Proteinpudding label: ultra-pasteurised, homogenised and aseptically filled" loading="lazy"></button></figure></div>
+      <div class="body">
+        <div class="eyebrow">Protein, ambient</div>
+        <h3>YT Proteinpudding by TINE</h3>
+        <ul class="facts">
+          <li>20 g protein per 190 g cup, lactose free, with sweeteners.</li>
+          <li>Ultra-pasteurised, homogenised and aseptically filled; the unopened cup can be stored at room temperature.</li>
+          <li>Developed in collaboration with Olympiatoppen, and carries a "best in test" seal from a 2023 consumer taste test.</li>
+          <li>YT protein shakes sit on a "Plukk &amp; miks" 3 for 2 offer at kr 30.90.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid g4 r34">
+      <figure><button class="ph" data-cap="YT Protein Pudding lid: no added sugar"><img src="img/n26.jpg" alt="YT Protein Pudding lid: no added sugar" loading="lazy"></button></figure><figure><button class="ph" data-cap="YT Proteinpudding back panel, made by TINE SA"><img src="img/g61.jpg" alt="YT Proteinpudding back panel, made by TINE SA" loading="lazy"></button></figure><figure><button class="ph" data-cap="YT protein shakes on a 3 for 2 offer"><img src="img/n10.jpg" alt="YT protein shakes on a 3 for 2 offer" loading="lazy"></button></figure><figure><button class="ph" data-cap="TINE iskaffe in caramel, cappuccino and latte"><img src="img/g60.jpg" alt="TINE iskaffe in caramel, cappuccino and latte" loading="lazy"></button></figure>
+    </div>
+
+    <p class="sub">Butter and cheese</p>
+    <div class="grid g4 r34" style="margin-top:22px">
+      <figure><button class="ph" data-cap="Président Gourmet Butter with sea salt crystals"><img src="img/n02.jpg" alt="Président Gourmet Butter with sea salt crystals" loading="lazy"></button></figure><figure><button class="ph" data-cap="Président Gourmet Butter, made in Normandy"><img src="img/n25.jpg" alt="Président Gourmet Butter, made in Normandy" loading="lazy"></button></figure><figure><button class="ph" data-cap="Président Gourmet Butter, 250 g"><img src="img/n28.jpg" alt="Président Gourmet Butter, 250 g" loading="lazy"></button></figure><figure><button class="ph" data-cap="Hand-made Jersey butter beside TINE Meierismør"><img src="img/g43.jpg" alt="Hand-made Jersey butter beside TINE Meierismør" loading="lazy"></button></figure><figure><button class="ph" data-cap="Jersey smør, wrapped in paper"><img src="img/g41.jpg" alt="Jersey smør, wrapped in paper" loading="lazy"></button></figure><figure><button class="ph" data-cap="Jersey smør: hand-made, 250 g, keep at 0 to 4°C"><img src="img/g42.jpg" alt="Jersey smør: hand-made, 250 g, keep at 0 to 4°C" loading="lazy"></button></figure>
+    </div>
+    <div class="vids wide"><figure class="vid"><video controls playsinline preload="none" poster="vid/w38.jpg" src="vid/w38.mp4"></video><figcaption>Snøfrisk, Philadelphia and TINE Kremgo</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w39.jpg" src="vid/w39.mp4"></video><figcaption>Kavli cheese tubes and Pultost</figcaption></figure></div>
+
+    <p class="sub">Desserts and pastry</p>
+    <div class="grid g4 r34" style="margin-top:22px">
+      <figure><button class="ph" data-cap="Toblerone Cheesecake by Almondy, 85 g"><img src="img/n01.jpg" alt="Toblerone Cheesecake by Almondy, 85 g" loading="lazy"></button></figure><figure><button class="ph" data-cap="Toblerone Cheesecake, front"><img src="img/n29.jpg" alt="Toblerone Cheesecake, front" loading="lazy"></button></figure><figure><button class="ph" data-cap="Toblerone Cheesecake, back panel"><img src="img/n11.jpg" alt="Toblerone Cheesecake, back panel" loading="lazy"></button></figure><figure><button class="ph" data-cap="Toblerone Cheesecake, opened"><img src="img/g53.jpg" alt="Toblerone Cheesecake, opened" loading="lazy"></button></figure><figure><button class="ph" data-cap="A layered dessert pot"><img src="img/n22.jpg" alt="A layered dessert pot" loading="lazy"></button></figure><figure><button class="ph" data-cap="Eclairs from the MENY bakery"><img src="img/g48.jpg" alt="Eclairs from the MENY bakery" loading="lazy"></button></figure><figure><button class="ph" data-cap="Eclair label: frozen at -18°C, kr 42.90"><img src="img/g47.jpg" alt="Eclair label: frozen at -18°C, kr 42.90" loading="lazy"></button></figure><figure><button class="ph" data-cap="Eclair label detail"><img src="img/g49.jpg" alt="Eclair label detail" loading="lazy"></button></figure><figure><button class="ph" data-cap="Eclairs, in the pack"><img src="img/g50.jpg" alt="Eclairs, in the pack" loading="lazy"></button></figure><figure><button class="ph" data-cap="A pastry tray from the cabinet"><img src="img/n09.jpg" alt="A pastry tray from the cabinet" loading="lazy"></button></figure><figure><button class="ph" data-cap="The cake cabinet"><img src="img/n07.jpg" alt="The cake cabinet" loading="lazy"></button></figure><figure><button class="ph" data-cap="Chia pudding label"><img src="img/g57.jpg" alt="Chia pudding label" loading="lazy"></button></figure>
+    </div>
+
+    <p class="sub">Ice cream and snacks</p>
+    <div class="vids"><figure class="vid"><video controls playsinline preload="none" poster="vid/w34.jpg" src="vid/w34.mp4"></video><figcaption>Royal, Hennig Olsen sandwich and Sørlandsis</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/w36.jpg" src="vid/w36.mp4"></video><figcaption>New: butter chicken chips at kr 37.90</figcaption></figure><figure class="vid"><video controls playsinline preload="none" poster="vid/v09.jpg" src="vid/v09.mp4"></video><figcaption>Brets chips with Nutri-Score labels</figcaption></figure></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="end">From Lund to Gjelleråsen: what was seen, tasted and written down for an Indian plant.</p>
+    <div class="sig"><span>STAIR · Field Notes</span><span>Sweden and Norway · October 2026</span><span>All photographs taken on site</span></div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lb-in">
+    <span class="lb-count" id="lbCount"></span>
+    <button class="lb-btn lb-x" id="lbX" aria-label="Close">✕</button>
+    <button class="lb-btn lb-p" id="lbP" aria-label="Previous photo">‹</button>
+    <img id="lbImg" alt="">
+    <div class="lb-cap" id="lbCap"></div>
+    <button class="lb-btn lb-n" id="lbN" aria-label="Next photo">›</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  const items=[...document.querySelectorAll('button.ph')];
+  const lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount');
+  let i=0;
+  function show(k){i=(k+items.length)%items.length;const b=items[i],s=b.querySelector('img');img.src=s.getAttribute('src');img.alt=s.alt;cap.textContent=b.dataset.cap||s.alt;cnt.textContent=(i+1)+' / '+items.length;}
+  items.forEach((b,k)=>b.addEventListener('click',()=>{show(k);if(lb.showModal)lb.showModal();}));
+  document.getElementById('lbX').onclick=()=>lb.close();
+  document.getElementById('lbP').onclick=()=>show(i-1);
+  document.getElementById('lbN').onclick=()=>show(i+1);
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lb-in'))lb.close();});
+  lb.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1);});
+  let x0=null;lb.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)show(d<0?i+1:i-1);x0=null;});
+})();
+
+(function(){
+  const figs=[...document.querySelectorAll('#reel figure')];const DUR=6000;let i=0,t=null;
+  function prep(f){const m=f.querySelector('img');if(m)m.loading='eager';const v=f.querySelector('video');if(v&&v.preload!=='auto'){v.preload='auto';}}
+  function go(k){const old=figs[i];old.classList.remove('on');const ov=old.querySelector('video');i=(k+figs.length)%figs.length;const f=figs[i];prep(f);void f.offsetWidth;f.classList.add('on');const v=f.querySelector('video');if(v){try{v.currentTime=0;const pr=v.play();if(pr)pr.catch(()=>{});}catch(e){}}if(ov)setTimeout(()=>{try{ov.pause()}catch(e){}},1700);prep(figs[(i+1)%figs.length]);}
+  function start(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>go(i+1),DUR);}
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(t);else start();});
+  go(0);start();
+})();
+
+document.addEventListener('play',e=>{if(!e.target.closest||e.target.closest('#reel'))return;document.querySelectorAll('main video').forEach(v=>{if(v!==e.target)v.pause();});},true);
+</script>
+
+</body></html>
