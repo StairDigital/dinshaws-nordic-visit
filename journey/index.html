@@ -1,0 +1,1279 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style></head><body>
+<title>Dinshaw's × STAIR Journey</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Semi+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: Dinshaw's own identity. Cream page, Dinshaw's red bands, chocolate ink. One long scroll-story told as a dairy journey: each chapter carries one of the brand's pop colours, and the Europe visit closes the book. */
+:root{
+  --bg:#FFF6E6; --paper:#FFFFFF; --ink:#3A1E14; --muted:#7A5747; --line:#F1DCC0;
+  --red:#DE251E; --red-ink:#FFFFFF; --cream-on-red:#FFE9C7;
+  --amber:#FFAB00; --blue:#21A9D1; --purple:#4B2A6F; --lime:#8DB000;
+  --c-meet:#DE251E; --c-doc:#4B2A6F; --c-mail:#E9B44C;
+  --ok:#2E7D4F; --ok-soft:#E3F2E8; --wait:#9A6400; --wait-soft:#FBEFD6; --go:#1C6F96; --go-soft:#DDF0F7;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --label:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
+  --wrap:1160px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1D110C; --paper:#2A1912; --ink:#FCEFDD; --muted:#CDB09A; --line:#463026;
+  --red:#E8382F; --cream-on-red:#FFE9C7; --amber:#FFC24D; --blue:#5CC5E6; --purple:#B79BE0; --lime:#B9D84A;
+  --c-meet:#FF6A60; --c-doc:#B79BE0; --c-mail:#F2C566;
+  --ok:#7BD3A0; --ok-soft:#173826; --wait:#F2C566; --wait-soft:#3A2B10; --go:#7CCDEB; --go-soft:#123241;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1D110C; --paper:#2A1912; --ink:#FCEFDD; --muted:#CDB09A; --line:#463026;
+  --red:#E8382F; --cream-on-red:#FFE9C7; --amber:#FFC24D; --blue:#5CC5E6; --purple:#B79BE0; --lime:#B9D84A;
+  --c-meet:#FF6A60; --c-doc:#B79BE0; --c-mail:#F2C566;
+  --ok:#7BD3A0; --ok-soft:#173826; --wait:#F2C566; --wait-soft:#3A2B10; --go:#7CCDEB; --go-soft:#123241;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--red)}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:0}
+p{margin:0}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.lbl{font-family:var(--label);font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+.tnum{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--red);color:#fff;overflow:hidden;isolation:isolate;min-height:min(820px,92svh)}
+.reel{position:absolute;inset:0 0 0 34%;z-index:0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 32%);mask-image:linear-gradient(90deg,transparent 0,#000 32%)}
+.reel figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.6s ease}
+.reel figure.on{opacity:1}
+.reel img,.reel video{width:100%;height:100%;object-fit:cover}
+.reel figure.on img{animation:kb 8s ease-out forwards}
+@keyframes kb{from{transform:scale(1.12) translate3d(1.5%,1%,0)}to{transform:scale(1.02)}}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(110,10,6,.35),rgba(110,10,6,0) 25%,rgba(110,10,6,0) 60%,rgba(150,14,8,.85))}
+.hero-band{position:relative;z-index:1;min-height:inherit;display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding-block:calc(26px + env(safe-area-inset-top,0px)) 30px;max-width:min(760px,62%)}
+.hero-top{display:flex;gap:12px;align-items:center;font-family:var(--label);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.hero-top b{font-family:var(--display);font-size:1.25rem;letter-spacing:.02em;color:#fff}
+.hero h1{font-weight:800;text-transform:uppercase;font-size:clamp(3rem,7.2vw,6.8rem);line-height:.88;color:#fff}
+.hero h1 em{font-style:italic;color:#FFD166}
+.hero .lede{margin-top:22px;font-size:clamp(1.02rem,1.35vw,1.2rem);max-width:48ch;color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 22px;margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.35)}
+.stats b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1;color:#fff}
+.stats span{display:block;font-family:var(--label);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:6px;line-height:1.3}
+.reel-cap{position:absolute;z-index:2;right:max(24px,env(safe-area-inset-right,0px));bottom:26px;text-align:right;max-width:min(380px,36%);font-size:.86rem;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.reel-cap small{display:block;font-family:var(--label);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#FFD166}
+@media(max-width:900px){
+  .reel{inset:0;-webkit-mask-image:none;mask-image:none}
+  .reel::after{background:linear-gradient(180deg,rgba(150,16,10,.45),rgba(180,20,14,.25) 28%,rgba(205,30,24,.94) 58%,#DE251E 100%)}
+  .hero-band{max-width:none}
+  .hero-mid{margin-top:34vh}
+  .reel-cap{display:none}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:var(--ink);color:var(--bg)}
+.nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;height:50px;align-items:center}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{flex:none;text-decoration:none;font-family:var(--display);font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;padding:6px 11px;border-radius:999px;color:color-mix(in srgb,var(--bg) 72%,transparent)}
+.nav a:hover,.nav a.on{color:var(--ink);background:var(--bg)}
+.progress{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--amber);z-index:80}
+
+/* ---------- chapters ---------- */
+section.ch{padding-block:clamp(64px,9vw,112px) 24px;--pop:var(--red)}
+.ch-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px 64px;align-items:end;margin-bottom:clamp(30px,4vw,48px)}
+.chip-n{display:inline-block;background:var(--pop);color:#fff;font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.ch-head h2{overflow-wrap:break-word;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:.92;font-weight:800;text-transform:uppercase;color:var(--red)}
+.ch-head .intro{color:var(--muted);font-size:1.06rem;max-width:58ch}
+@media(max-width:820px){.ch-head{grid-template-columns:1fr}}
+#timeline{--pop:var(--purple)} #visits{--pop:var(--blue)} #results{--pop:var(--lime)} #leadership{--pop:var(--purple)}
+#decisions{--pop:var(--red)} #research{--pop:var(--amber)} #governance{--pop:var(--blue)} #sweden{--pop:var(--purple)} #documents{--pop:var(--red)} #next{--pop:var(--lime)}
+.sub{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(1.5rem,2.6vw,2rem);margin:clamp(48px,6vw,72px) 0 8px}
+.sub + p.lead{color:var(--muted);max-width:62ch;margin-bottom:22px}
+.band{background:var(--paper);border-block:1px solid var(--line)}
+
+/* cards & grids */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;min-width:0}
+.card h3{font-size:1.35rem;font-weight:700;line-height:1.15;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.facts{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+.facts li{position:relative;padding-left:18px;font-size:.95rem}
+.facts li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--pop,var(--red))}
+.big{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:var(--red)}
+.big small{font-family:var(--label);font-size:.8rem;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:.04em}
+.src{font-family:var(--label);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+
+/* story */
+.story{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+.card .quote{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.1;color:var(--ink)}
+.quote em{color:var(--red);font-style:normal}
+.areas{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px;counter-reset:a}
+.areas li{counter-increment:a;display:flex;gap:12px;align-items:baseline;padding:10px 14px;border-radius:10px;background:var(--bg);border:1px solid var(--line)}
+.areas li::before{content:counter(a);font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--red);min-width:14px}
+
+/* charts */
+.chart{width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--label);font-size:12px;fill:var(--muted)}
+.chart .val{fill:var(--ink);font-weight:600}
+.chart .ax{stroke:var(--line);stroke-width:1}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--label);font-size:.8rem;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.grow{transform-origin:left center;transition:transform 1.1s cubic-bezier(.25,.8,.25,1)}
+.growy{transform-origin:center bottom;transform-box:fill-box;transition:transform 1s cubic-bezier(.25,.8,.25,1)}
+.js .pre .grow{transform:scaleX(.001)}
+.js .pre .growy{transform:scaleY(.001)}
+.hb{display:grid;gap:10px}
+.hb-row{display:grid;grid-template-columns:minmax(90px,170px) minmax(0,1fr) auto;gap:12px;align-items:center;font-size:.9rem}
+.hb-row .t{height:14px;border-radius:4px;background:var(--line);overflow:hidden}
+.hb-row .t i{display:block;height:100%;border-radius:4px;background:var(--pop,var(--red))}
+.hb-row b{font-family:var(--label);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chart-wrap{overflow-x:auto}
+.chart-wrap svg{min-width:640px}
+
+/* timeline */
+.phases{position:relative;padding-left:44px}
+.rail{position:absolute;left:11px;top:8px;bottom:8px;width:3px;background:var(--line);border-radius:3px}
+.rail i{position:absolute;inset:0;transform-origin:top;transform:scaleY(0);background:var(--purple);border-radius:3px}
+.phase{position:relative;padding-bottom:clamp(40px,5vw,64px)}
+.phase:last-child{padding-bottom:0}
+.phase::before{content:"";position:absolute;left:-42px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--bg);border:3px solid var(--purple)}
+.phase.lit::before{background:var(--purple)}
+.phase .when{font-family:var(--label);font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--purple)}
+.phase h3{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;text-transform:uppercase;line-height:1}
+.phase .theme{color:var(--muted);margin-top:6px;max-width:60ch}
+.ms{list-style:none;padding:0;margin:18px 0 0;border-top:1px solid var(--line)}
+.ms li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.ms time{font-family:var(--label);font-weight:600;font-size:.8rem;color:var(--muted);padding-top:3px;letter-spacing:.03em}
+.ms li.visit time{color:var(--blue)}
+.ms li.visit span::before{content:"Visit";font-family:var(--label);font-weight:600;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;background:var(--go-soft);color:var(--go);padding:2px 7px;border-radius:999px;margin-right:8px;vertical-align:2px}
+.keyd{margin-top:16px;display:flex;gap:14px;align-items:flex-start;padding:14px 18px;border-radius:12px;background:var(--paper);border:1px solid var(--line)}
+.keyd .lbl{color:var(--red);white-space:nowrap;padding-top:3px}
+@media(max-width:600px){.ms li{grid-template-columns:1fr;gap:2px}.keyd{flex-direction:column;gap:4px}.phases{padding-left:34px}.phase::before{left:-34px;width:18px;height:18px}.rail{left:7px}}
+
+/* visits / stamps */
+.stamps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(max-width:900px){.stamps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stamp{position:relative;border:2px dashed var(--pop-s,var(--red));border-radius:14px;padding:16px 16px 14px;background:var(--paper);min-width:0}
+.stamp .n{position:absolute;top:10px;right:12px;font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--pop-s,var(--red));opacity:.35}
+.stamp .city{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.3rem;color:var(--pop-s,var(--red));line-height:1}
+.stamp time{display:block;font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.06em;color:var(--muted);margin:4px 0 8px}
+.stamp p{font-size:.88rem;color:var(--ink)}
+.stamp.eu{--pop-s:var(--purple)} .stamp.es{--pop-s:var(--amber)} .stamp.blr{--pop-s:var(--blue)}
+.stamp.plan{border-style:dotted;opacity:.85}
+
+/* leadership */
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:700px){.roles{grid-template-columns:1fr}}
+.role{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;min-width:0}
+.role h3{font-size:1.25rem;font-weight:700}
+.role .who{font-size:.95rem}
+.role .when{grid-column:1/-1;color:var(--muted);font-size:.88rem}
+.pill{font-family:var(--label);font-weight:600;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap;align-self:start}
+.p-ok{background:var(--ok-soft);color:var(--ok)} .p-go{background:var(--go-soft);color:var(--go)} .p-wait{background:var(--wait-soft);color:var(--wait)}
+.process{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:s}
+.process li{counter-increment:s;display:flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:.9rem}
+.process li::before{content:counter(s);display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--purple);color:#fff;font-family:var(--label);font-size:.75rem;font-weight:600}
+
+/* filters + registers */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{font:500 .9rem var(--body);padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--muted);cursor:pointer}
+.chip:hover{color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.chip .n{opacity:.7;margin-left:5px;font-variant-numeric:tabular-nums}
+.reg{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.reg li{display:grid;grid-template-columns:110px minmax(0,1fr) 150px;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.reg time{font-family:var(--label);font-weight:600;font-size:.8rem;color:var(--muted)}
+.reg .tag{font-family:var(--label);font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);text-align:right}
+.reg .by{display:block;color:var(--muted);font-size:.86rem}
+@media(max-width:640px){.reg li{grid-template-columns:1fr;gap:2px}.reg .tag{text-align:left}}
+
+/* value */
+.val .out{font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1.2;color:var(--red);margin:4px 0}
+.val .row{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.val h3{font-size:1.1rem;margin:0}
+.val time{font-family:var(--label);font-size:.75rem;color:var(--muted);white-space:nowrap}
+
+/* media */
+.ph{margin:0;padding:0;border:0;display:block;width:100%;background:var(--line);border-radius:14px;overflow:hidden;cursor:zoom-in;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ph:hover img{transform:scale(1.04)}
+figure{margin:0;min-width:0}
+figcaption{font-size:.84rem;color:var(--muted);margin-top:8px;line-height:1.4}
+.r34 .ph{aspect-ratio:3/4}.r43 .ph{aspect-ratio:4/3}.r169 .ph{aspect-ratio:16/9}.r11 .ph{aspect-ratio:1/1}
+.vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media(max-width:900px){.vids{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.vid video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#120a07;border-radius:14px}
+.bleed{position:relative;border-radius:20px;overflow:hidden;margin-top:24px}
+.bleed img{width:100%;aspect-ratio:21/9;object-fit:cover}
+.bleed .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 24px 18px;background:linear-gradient(180deg,transparent,rgba(30,10,4,.82));color:#fff;font-family:var(--display);font-weight:700;font-size:clamp(1.2rem,2.4vw,1.8rem);text-transform:uppercase;line-height:1.05}
+@media(max-width:620px){.bleed img{aspect-ratio:4/3}}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:center;margin-top:28px}
+.split.rev > :first-child{order:2}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:20px}.split.rev > :first-child{order:0}}
+
+/* research */
+.rc{position:relative}
+.rc .lbl{color:var(--muted)}
+.rc h3{margin-top:6px}
+.feature{grid-column:span 2;background:var(--red);border-color:var(--red);color:#fff}
+.feature p,.feature .lbl{color:var(--cream-on-red)}
+.feature h3{color:#fff}
+@media(max-width:560px){.feature{grid-column:auto}}
+.spec{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--ink);margin-top:14px}
+.spec div{padding:14px 14px 14px 0;min-width:0}
+.spec div + div{padding-left:14px;border-left:1px solid var(--line)}
+.spec b{display:block;font-family:var(--display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--red)}
+.spec span{font-size:.84rem;color:var(--muted)}
+@media(max-width:700px){.spec{grid-template-columns:1fr 1fr}.spec div:nth-child(3){padding-left:0;border-left:0}}
+
+/* sweden */
+.sw-hero{background:var(--purple);color:#fff;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.sw-hero .txt{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:14px;justify-content:center}
+.sw-hero h3{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:.92;color:#fff}
+.sw-hero p{color:#E9DDFB}
+.sw-hero video,.sw-hero img{width:100%;height:100%;object-fit:cover;min-height:320px}
+@media(max-width:820px){.sw-hero{grid-template-columns:1fr}}
+.route{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:22px;border-top:2px solid var(--ink)}
+.route div{padding:14px 12px 14px 0;min-width:0}
+.route div + div{padding-left:12px;border-left:1px solid var(--line)}
+.route b{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem;text-transform:uppercase;line-height:1.1}
+.route span{font-size:.84rem;color:var(--muted)}
+@media(max-width:820px){.route{grid-template-columns:1fr 1fr}.route div{border-left:0!important;padding-left:0!important;border-bottom:1px solid var(--line)}}
+.top10{list-style:none;counter-reset:t;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 34px}
+.top10 li{counter-increment:t;position:relative;padding-left:44px;min-width:0}
+.top10 li::before{content:counter(t);position:absolute;left:0;top:-4px;font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;color:var(--purple)}
+.top10 b{display:block}
+.top10 span{color:var(--muted);font-size:.93rem}
+@media(max-width:720px){.top10{grid-template-columns:1fr}}
+.flows{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media(max-width:980px){.flows{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.flows{grid-template-columns:1fr}}
+.flow h4{font-weight:800;text-transform:uppercase;font-size:1.7rem;color:var(--purple)}
+.flow .base{font-family:var(--label);font-size:.78rem;color:var(--muted);margin:2px 0 10px}
+.flow ol{list-style:none;counter-reset:f;margin:0;padding:0}
+.flow li{counter-increment:f;position:relative;padding:7px 0 7px 32px;border-top:1px solid var(--line);font-size:.9rem;line-height:1.35}
+.flow li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:var(--label);font-weight:600;font-size:.74rem;color:var(--purple)}
+.todo{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.todo li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:.95rem}
+.todo li::before{content:"";width:18px;height:18px;border:2px solid var(--purple);border-radius:5px;margin-top:3px}
+.todo em{display:block;font-style:normal;font-family:var(--label);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* documents */
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:900px){.docs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.docs{grid-template-columns:1fr}}
+.doc{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.doc .thumb{aspect-ratio:16/10;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);cursor:zoom-in;padding:0;border-width:0 0 1px;display:block;width:100%}
+.doc .thumb img{width:100%;height:auto;object-fit:cover;object-position:top}
+.doc .in{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.doc .meta{display:flex;justify-content:space-between;gap:8px;font-family:var(--label);font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.doc .meta .ws{color:var(--red)}
+.doc h3{font-size:1.25rem;line-height:1.12}
+.doc p{font-size:.92rem;color:var(--muted)}
+.doc details{margin-top:auto;padding-top:8px}
+.doc summary{cursor:pointer;font-family:var(--label);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+.doc details ul{margin:8px 0 0;padding-left:18px;font-size:.88rem}
+.doclist{list-style:none;padding:0;margin:0;columns:2;column-gap:34px}
+.doclist li{break-inside:avoid;display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.doclist time{font-family:var(--label);font-weight:600;font-size:.78rem;color:var(--muted);padding-top:2px}
+.doclist .w{display:block;font-family:var(--label);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+@media(max-width:700px){.doclist{columns:1}}
+.sites{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media(max-width:820px){.sites{grid-template-columns:1fr}}
+.site{display:flex;flex-direction:column;gap:6px;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0;transition:border-color .2s,transform .2s}
+.site:hover{border-color:var(--red);transform:translateY(-2px)}
+.site b{font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.1}
+.site span{font-size:.9rem;color:var(--muted)}
+.site em{font-style:normal;font-family:var(--label);font-weight:600;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-top:auto}
+
+/* next */
+.next{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(max-width:900px){.next{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.next{grid-template-columns:1fr}}
+.next li{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.next time{font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.06em;color:var(--red)}
+.next b{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.15}
+.next span{font-size:.9rem;color:var(--muted)}
+.gloss{columns:3;column-gap:30px;font-size:.88rem;color:var(--muted)}
+.gloss p{break-inside:avoid;margin-bottom:6px}
+.gloss b{color:var(--ink)}
+@media(max-width:820px){.gloss{columns:2}}@media(max-width:480px){.gloss{columns:1}}
+
+footer{background:var(--red);color:#fff;margin-top:clamp(64px,8vw,96px)}
+footer .wrap{padding-block:56px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .end{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:.95;max-width:20ch}
+footer .sig{font-family:var(--label);font-size:.8rem;color:var(--cream-on-red);line-height:1.6}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;margin:0}
+dialog.lb::backdrop{background:rgba(20,8,4,.93)}
+.lb-in{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-in img{max-width:min(1400px,100%);max-height:calc(100% - 70px);object-fit:contain;border-radius:8px}
+.lb-cap{color:#F3E4D0;font-size:.92rem;text-align:center;max-width:70ch}
+.lb-btn{position:absolute;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:1.2rem;cursor:pointer}
+.lb-x{top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
+.lb-p{left:calc(10px + env(safe-area-inset-left,0px));top:50%}.lb-n{right:calc(10px + env(safe-area-inset-right,0px));top:50%}
+
+/* reveal */
+.js .rv{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.pre{opacity:.06;transform:translateY(22px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reel figure.on img{animation:none}
+  .js .rv,.js .rv.pre{opacity:1;transform:none;transition:none}
+  .js .pre .grow,.js .pre .growy{transform:none}
+  .grow,.growy{transition:none}
+  .ph img{transition:none}
+}
+</style>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="hero" aria-label="Dinshaw's and STAIR">
+  <div class="reel" id="reel" aria-hidden="true">
+    <figure class="on" data-k="Sweden" data-c="Mr Zervin Rana and Mr Shubham Saraff at Tetra Pak"><img src="../img/hero_r07.jpg" alt="" style="object-position:50% 62%"></figure>
+    <figure data-k="Tetra Pak, Sweden" data-c="The Indian flag at the entrance on the day of the visit"><img src="../img/hero_r03.jpg" alt="" loading="lazy"></figure>
+    <figure data-k="Diplom-Is, Norway" data-c="An ice cream stick line in motion"><video src="../vid/hero_w11.mp4" muted loop playsinline preload="none"></video></figure>
+    <figure data-k="Yoghurt session" data-c="Best-practice lines for yoghurt production"><img src="../img/hero_p07.jpg" alt="" loading="lazy"></figure>
+    <figure data-k="Spain, September" data-c="Primary research on the European freezer aisle"><img src="es/es02.jpg" alt="" loading="lazy" style="object-position:50% 40%"></figure>
+    <figure data-k="Diplom-Is, Norway" data-c="Robot packing of chocolate tubs"><video src="../vid/hero_v13.mp4" muted loop playsinline preload="none"></video></figure>
+    <figure data-k="Tetra Top session" data-c="Chilled Innovation Spotlight"><img src="../img/hero_l06.jpg" alt="" loading="lazy"></figure>
+  </div>
+  <div class="wrap">
+    <div class="hero-band">
+      <div class="hero-top"><b>STAIR × Dinshaw's</b><span>September 2025 to October 2026</span></div>
+      <div class="hero-mid">
+        <h1>Building <em>Dinshaw's Next Chapter</em></h1>
+        <p class="lede">13 months of working alongside the Dinshaw's promoters: building a professional leadership team, a digital backbone, a quick commerce engine and the next generation of dairy products, ending with a study tour of Europe's best yoghurt and ice cream plants.</p>
+        <div class="stats tnum">
+          <div><b data-count="8">8</b><span>Working visits to Nagpur</span></div>
+          <div><b data-count="133">133</b><span>Meetings, calls and interviews logged</span></div>
+          <div><b data-count="116">116</b><span>Documents and reports delivered</span></div>
+          <div><b data-count="7">7</b><span>Leadership roles designed and searched</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reel-cap" id="reelcap"><small>Sweden</small>Mr Zervin Rana and Mr Shubham Saraff at Tetra Pak</div>
+</header>
+
+<nav class="nav" aria-label="Chapters">
+  <div class="wrap" id="navlinks">
+    <a href="#story">Story</a><a href="#timeline">Timeline</a><a href="#visits">Visits</a><a href="#results">Results</a><a href="#leadership">Leadership</a><a href="#decisions">Decisions</a><a href="#research">Research</a><a href="#governance">Governance</a><a href="#sweden">Europe Visit</a><a href="#documents">Documents</a><a href="#next">Next</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- STORY -->
+<section class="ch" id="story">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 1</span><h2>Where It Started</h2></div>
+      <p class="intro">The engagement began in September 2025 with 1 brief: help Dinshaw's find its first Chief Human Resources Officer. By the first plant visit 6 weeks later, the promoters and STAIR had agreed a far wider agenda for a 90-year-old Nagpur house moving from a family-run model to a professionally managed company.</p>
+    </div>
+    <div class="story">
+      <div class="card rv">
+        <p class="quote">A CHRO search became a <em>company-wide transformation</em>: leadership, digital, factory, quick commerce, new products and governance.</p>
+        <p class="src">First deliverable: a CHRO job description and a skill matrix scored on the promoters' own weightages</p>
+      </div>
+      <div class="card rv">
+        <span class="lbl muted">The agenda set in Nagpur, 31 October 2025</span>
+        <ol class="areas">
+          <li>Human resources and leadership hiring</li>
+          <li>Sales enablement</li>
+          <li>Data, reporting and ERP</li>
+          <li>Quick commerce and e-commerce</li>
+          <li>Finance and operations analytics</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 class="sub rv">13 Months of Work, Month by Month</h3>
+    <p class="lead rv">Every meeting, document and email thread from STAIR's engagement journal for Dinshaw's. The work deepened as the leadership searches, the SAP programme and quick commerce ran in parallel from May 2026.</p>
+    <div class="card rv" id="activity-card">
+      <div class="chart-wrap"><svg class="chart" id="ch-activity" viewBox="0 0 900 330" role="img" aria-label="Monthly activity, September 2025 to October 2026"></svg></div>
+      <div class="legend"><span><i style="background:var(--c-meet)"></i>Meetings, calls and interviews</span><span><i style="background:var(--c-doc)"></i>Documents and reports</span><span><i style="background:var(--c-mail)"></i>Email coordination</span></div>
+      <p class="src">Source: STAIR engagement journal; October 2026 counted to 21 October</p>
+    </div>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card rv">
+        <h3>Where the Effort Went</h3>
+        <p>Logged work items by workstream across the 13 months.</p>
+        <div class="hb" id="hb-ws" style="margin-top:16px"></div>
+      </div>
+      <div class="card rv">
+        <h3>How the Work Was Done</h3>
+        <p>593 logged work items, by kind.</p>
+        <div class="hb" id="hb-kind" style="margin-top:16px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="ch band" id="timeline">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 2</span><h2>The Journey, Step by Step</h2></div>
+      <p class="intro">6 phases, from the first hiring brief to the Europe study tour. Nagpur working visits are marked so the rhythm of the engagement is visible.</p>
+    </div>
+    <div class="phases" id="phases">
+      <div class="rail" aria-hidden="true"><i id="railfill"></i></div>
+
+      <article class="phase rv">
+        <span class="when">Phase 1 · September to December 2025</span>
+        <h3>Foundation</h3>
+        <p class="theme">Setting the hiring standard, choosing search partners and resetting how marketing money is spent.</p>
+        <ul class="ms">
+          <li><time>Sep 2025</time><span>First CHRO discussion with the promoters; job description and scored skill matrix created</span></li>
+          <li><time>23 Sep 2025</time><span>SalesCode.ai assessed as a tool for retailer-facing sales teams</span></li>
+          <li><time>14 Oct 2025</time><span>4 executive search firms met: Gilbert Tweed, Executive Access, Questa and EMA Partners</span></li>
+          <li class="visit"><time>31 Oct 2025</time><span>First visit to the Nagpur office and plant; 5-area agenda agreed</span></li>
+          <li><time>14 Nov 2025</time><span>SAP ERP Integration Report delivered; Factory Ergonomics note shared</span></li>
+          <li><time>15 Nov 2025</time><span>EMA Partners appointed on terms strengthened by STAIR</span></li>
+          <li><time>5 Dec 2025</time><span>Marketing Spends Gold Standard: a channel-by-channel plan of about Rs 15 Cr</span></li>
+          <li class="visit"><time>15 Dec 2025</time><span>Second Nagpur visit: quality circles and IoT work begin; agency timeline set</span></li>
+          <li><time>Dec 2025</time><span>6 marketing agencies briefed and met; Values Manual for incoming leaders drafted</span></li>
+        </ul>
+        <div class="keyd"><span class="lbl">Key Decision</span><span>Marketing moves to performance-led digital, and the 2 planned CEO roles become Business Heads for Dairy and Ice Cream.</span></div>
+      </article>
+
+      <article class="phase rv">
+        <span class="when">Phase 2 · January to April 2026</span>
+        <h3>Design</h3>
+        <p class="theme">Choosing the ERP, shaping the organisation and launching the season's campaigns.</p>
+        <ul class="ms">
+          <li><time>Jan 2026</time><span>Agency pitches from CyberMedia, ToggleHead, Network Advertising and BEI Confluence; quick commerce alignment begins</span></li>
+          <li class="visit"><time>24 Feb 2026</time><span>Nagpur visit: attendance and marketing operations review, CHRO interviews</span></li>
+          <li><time>4 Mar 2026</time><span>PR for the Dildaar campaign re-scoped from about Rs 30 lakh to about Rs 7 lakh</span></li>
+          <li><time>13 Mar 2026</time><span>SAP Implementation Scope of Work and ERP Blueprint delivered</span></li>
+          <li class="visit"><time>26–27 Mar 2026</time><span>Nagpur reviews on hiring, factory, financials, forecasting, sales automation and SAP</span></li>
+          <li><time>13 Apr 2026</time><span>ERP evaluation (QAD vs SAP), organisation structure and Milky Mist case study presented</span></li>
+          <li><time>20 Apr 2026</time><span>Cold-room energy pilot approved, with a path to all 60 cold rooms at Butibori</span></li>
+          <li class="visit"><time>30 Apr 2026</time><span>Nagpur visit: SAP S/4HANA Public Cloud with a clean-core design agreed</span></li>
+        </ul>
+        <div class="keyd"><span class="lbl">Key Decision</span><span>SAP chosen over QAD, and a 2-tier leadership model adopted with Business Heads reporting to the promoters.</span></div>
+      </article>
+
+      <article class="phase rv">
+        <span class="when">Phase 3 · May to July 2026</span>
+        <h3>Build</h3>
+        <p class="theme">The first leaders sign on, quick commerce takes off and the SAP programme gets its partner.</p>
+        <ul class="ms">
+          <li><time>7 May 2026</time><span>Strategy session with Mr Shailesh Haribhakti; quick commerce revenue crosses Rs 1 Cr; SAP task force formed</span></li>
+          <li><time>May 2026</time><span>Competitor notes on Milky Mist and Heritage, a weather and cold-chain report and the Food Pharmer note</span></li>
+          <li><time>2 Jun 2026</time><span>Low-cost AI vision on existing CCTV chosen over heavy IoT hardware</span></li>
+          <li><time>22 Jun 2026</time><span>SAP gap analysis and solution design workshops</span></li>
+          <li class="visit"><time>1–4 Jul 2026</time><span>Nagpur Strategic Review: hiring, ERP, factory AI, Base and Aspiration Plans, peer benchmarking</span></li>
+          <li><time>6 Jul 2026</time><span>Q1 FY 2026-27 progress report issued to the promoters</span></li>
+          <li><time>14 Jul 2026</time><span>African Value-Added Dairy market report delivered (8 countries, 4 regions)</span></li>
+          <li><time>17 Jul 2026</time><span>Plant energy audit reviewed: Rs 2.38 Cr a year of savings identified</span></li>
+          <li><time>28 Jul 2026</time><span>SAP governance pack submitted: process owners, steering committee and charter</span></li>
+        </ul>
+        <div class="keyd"><span class="lbl">Key Decision</span><span>GFI preferred as SAP partner: a 7-month implementation plus 12 months of support, with AI added once the ERP is stable.</span></div>
+      </article>
+
+      <article class="phase rv">
+        <span class="when">Phase 4 · August to September 2026</span>
+        <h3>Scale</h3>
+        <p class="theme">Winning 1 market at a time, setting factory priorities and building the governance model.</p>
+        <ul class="ms">
+          <li class="visit"><time>12–13 Aug 2026</time><span>Nagpur visit: Ice Cream and Dairy confirmed as the 2 lead verticals; 4 factory priorities set</span></li>
+          <li><time>21 Aug 2026</time><span>Project Pune named the quick commerce priority; RFID discovery with ID Tech</span></li>
+          <li><time>28 Aug 2026</time><span>Business Head, Ice Cream signs</span></li>
+          <li><time>5 Sep 2026</time><span>Dairy quick commerce campaign goes live: Ghee, Paneer, Curd and Milk</span></li>
+          <li><time>Sep 2026</time><span>Spain and Malta shelf research: 91 images, 18 videos and 8 to 9 retailer interviews</span></li>
+          <li><time>19 Sep 2026</time><span>Project review: R&amp;D focus on skyr, mini milk-ice sticks evaluated, Africa talks restarted</span></li>
+          <li><time>21 Sep 2026</time><span>PMG Engineers order received for a 3-year plant upgrade programme</span></li>
+        </ul>
+        <div class="keyd"><span class="lbl">Key Decision</span><span>Win Pune first: platform advertising over discounting, with new cities opened only once Pune performs.</span></div>
+      </article>
+
+      <article class="phase rv">
+        <span class="when">Phase 5 · Early October 2026</span>
+        <h3>New Products and a New Board</h3>
+        <p class="theme">Skyr chosen, the board defined, a reset with Instamart and the leadership team close to complete.</p>
+        <ul class="ms">
+          <li class="visit"><time>30 Sep–1 Oct</time><span>Nagpur review over 2 days: 32 action items, Base Plan signed off, 3 separate P&amp;Ls by vertical, store design chosen</span></li>
+          <li><time>1 Oct 2026</time><span>New Product Development note: skyr and an unflavoured probiotic dahi</span></li>
+          <li><time>3 Oct 2026</time><span>Board structure set; Promoter-Professional Engagement Framework agreed</span></li>
+          <li><time>3 Oct 2026</time><span>Meeting with Ms Nandita Sinha, CEO of Instamart</span></li>
+          <li><time>4 Oct 2026</time><span>Business plan for 3 own-retail formats: Ice Cream Studio, Company Store and Kiosk</span></li>
+          <li><time>9 Oct 2026</time><span>Q2 progress report issued; HRMS pilots secured from both vendors at no cost</span></li>
+          <li><time>10–12 Oct 2026</time><span>Chobani profile, dairy product research and Dcluttr review; question bank of 272 questions for Tetra Pak</span></li>
+        </ul>
+        <div class="keyd"><span class="lbl">Key Decision</span><span>Skyr over Greek yoghurt: high protein, low fat, no added sugar, sold through quick commerce and corporate channels.</span></div>
+      </article>
+
+      <article class="phase rv">
+        <span class="when">Phase 6 · Mid-October 2026</span>
+        <h3>Europe Study Tour</h3>
+        <p class="theme">Testing the yoghurt plant thesis with Tetra Pak and seeing world-class ice cream manufacturing first-hand.</p>
+        <ul class="ms">
+          <li class="visit"><time>12 Oct 2026</time><span>Tetra Pak, Sweden: Tetra Top session, yoghurt process session, tasting and a night working session</span></li>
+          <li class="visit"><time>Oct 2026</time><span>Diplom-Is, Gjelleråsen, Norway: ice cream lines, robot packing, palletising and cold store</span></li>
+          <li class="visit"><time>Oct 2026</time><span>Oslo supermarket walk: yoghurt, skyr, protein, butter, desserts and ice cream</span></li>
+          <li><time>Oct 2026</time><span>Field notes site, insights and a to-do list of 40+ actions shared with the promoters</span></li>
+        </ul>
+        <div class="keyd"><span class="lbl">Key Decision</span><span>Fix taste, texture and flavour first, then choose the process; size the plant at 120% once the recipe is frozen.</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VISITS -->
+<section class="ch" id="visits">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 3</span><h2>On the Ground</h2></div>
+      <p class="intro">The work was done in the plant and in the market, not only on calls: 8 working visits to Nagpur, primary research in Spain and Malta, and the study tour of Sweden and Norway.</p>
+    </div>
+    <div class="stamps rv">
+      <div class="stamp"><span class="n">01</span><div class="city">Nagpur</div><time>31 Oct 2025</time><p>Office and plant visit; the 5-area agenda agreed.</p></div>
+      <div class="stamp"><span class="n">02</span><div class="city">Nagpur</div><time>15 Dec 2025</time><p>Quality circles, IoT and the agency timeline.</p></div>
+      <div class="stamp"><span class="n">03</span><div class="city">Nagpur</div><time>24 Feb 2026</time><p>Attendance and marketing operations review.</p></div>
+      <div class="stamp"><span class="n">04</span><div class="city">Nagpur</div><time>26–27 Mar 2026</time><p>6 sessions: hiring, factory, finance, forecasting, SFA and SAP.</p></div>
+      <div class="stamp"><span class="n">05</span><div class="city">Nagpur</div><time>30 Apr 2026</time><p>SAP strategy, leadership hiring and organisation.</p></div>
+      <div class="stamp"><span class="n">06</span><div class="city">Nagpur</div><time>1–4 Jul 2026</time><p>Monthly Strategic Review and Q1 progress.</p></div>
+      <div class="stamp"><span class="n">07</span><div class="city">Nagpur</div><time>12–13 Aug 2026</time><p>Business review, candidate interviews, factory priorities.</p></div>
+      <div class="stamp"><span class="n">08</span><div class="city">Nagpur</div><time>30 Sep–1 Oct 2026</time><p>New products, governance, Pune plan; 32 action items.</p></div>
+      <div class="stamp es"><span class="n">ES</span><div class="city">Spain &amp; Malta</div><time>September 2026</time><p>Freezer and chilled aisles at Carrefour, ALDI and Maltese stores.</p></div>
+      <div class="stamp eu"><span class="n">SE</span><div class="city">Sweden</div><time>12 Oct 2026</time><p>Tetra Pak: Tetra Top, yoghurt process and tasting.</p></div>
+      <div class="stamp eu"><span class="n">NO</span><div class="city">Gjelleråsen &amp; Oslo</div><time>October 2026</time><p>Diplom-Is ice cream plant and a Norwegian shelf walk.</p></div>
+      <div class="stamp blr plan"><span class="n">BLR</span><div class="city">Bengaluru</div><time>27–29 Oct 2026 · Planned</time><p>Working session with the Instamart team.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="ch band" id="results">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 4</span><h2>Results So Far</h2></div>
+      <p class="intro">Focused bets are already paying back. Figures as reported in the weekly quick commerce reviews, the Nagpur meetings and the Q2 progress report.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card rv">
+        <span class="lbl muted">Blinkit, April to September</span>
+        <div class="big tnum" style="margin-top:6px">~Rs 5 Cr</div>
+        <p>Against about Rs 60 lakh in the same months last year. Blinkit now works as a national distributor for Dinshaw's.</p>
+        <div class="hb" id="hb-blinkit" style="margin-top:14px"></div>
+      </div>
+      <div class="card rv">
+        <span class="lbl muted">Pune, Blinkit ice cream</span>
+        <div class="big tnum" style="margin-top:6px">~3x</div>
+        <p>From Rs 4 lakh to Rs 11 to 12 lakh a month in 2 months, on Rs 2.5 lakh of search spend.</p>
+        <div class="hb" id="hb-pune" style="margin-top:14px"></div>
+      </div>
+      <div class="card rv">
+        <span class="lbl muted">Ghee on quick commerce</span>
+        <div class="big tnum" style="margin-top:6px">30x</div>
+        <p>A Rs 50,000 investment generated Rs 15 lakh of revenue. Ghee now runs at about 2 tonnes a month.</p>
+        <div class="hb" id="hb-ghee" style="margin-top:14px"></div>
+      </div>
+      <div class="card rv">
+        <span class="lbl muted">Reach</span>
+        <div class="big tnum" style="margin-top:6px">3 → 20</div>
+        <p>Blinkit pockets served, across 32 cities and 5 distribution centres; 45 SKUs listed, 23 active.</p>
+      </div>
+      <div class="card rv">
+        <span class="lbl muted">Run-rate</span>
+        <div class="big tnum" style="margin-top:6px">~Rs 1 Cr<small>a month</small></div>
+        <p>Combined quick commerce across ice cream and dairy at the 21 September review. In September, Blinkit returned Rs 48 lakh of sales on about Rs 23 lakh.</p>
+      </div>
+      <div class="card rv">
+        <span class="lbl muted">Plant energy audit</span>
+        <div class="big tnum" style="margin-top:6px">Rs 2.38 Cr<small>a year</small></div>
+        <p>Annual savings identified for Rs 1.89 Cr of investment: a payback inside 1 year.</p>
+        <div class="hb" id="hb-energy" style="margin-top:14px"></div>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card rv">
+        <h3>The Plant Workforce in Scope for HRMS</h3>
+        <p>Baseline gathered for the HRMS evaluation: about 2,900 people at peak season.</p>
+        <div class="hb" id="hb-work" style="margin-top:16px"></div>
+      </div>
+      <div class="card rv">
+        <h3>Media Plan Discipline</h3>
+        <p>Performance marketing capped at Rs 3.5 Cr to March 2027, every rupee mapped to sales and return on ad spend.</p>
+        <div class="hb" id="hb-media" style="margin-top:16px"></div>
+        <p class="src">Festive plan over about 6 weeks from 7–8 October</p>
+      </div>
+    </div>
+
+    <h3 class="sub rv">Value Secured on Dinshaw's Behalf</h3>
+    <p class="lead rv">Every partner contract and invoice was reviewed clause by clause before signature.</p>
+    <div class="grid g3">
+      <div class="card val rv"><div class="row"><h3>Ad Factors · Dildaar PR</h3><time>Mar 2026</time></div><div class="out">~Rs 30 lakh → ~Rs 7 lakh</div><p>PR fee re-scoped to the core brief.</p></div>
+      <div class="card val rv"><div class="row"><h3>EMA Partners · Agreement</h3><time>Nov 2025</time></div><div class="out">Guarantee 6 → 12 months</div><p>Admin fee capped; first 3 candidate assessments included.</p></div>
+      <div class="card val rv"><div class="row"><h3>EMA Partners · Invoice</h3><time>Sep 2026</time></div><div class="out">Rs 15.50 lakh → Rs 10 lakh</div><p>Stage 3 billing brought back in line with the parent agreement.</p></div>
+      <div class="card val rv"><div class="row"><h3>Executive Access</h3><time>Jul–Aug 2026</time></div><div class="out">50% cancellation fee removed</div><p>Replaced with milestone payments.</p></div>
+      <div class="card val rv"><div class="row"><h3>Questa Search Partners</h3><time>Jul 2026</time></div><div class="out">Tiered fee → flat 8.33%</div><p>Invoiced only after the hire completes 15 days.</p></div>
+      <div class="card val rv"><div class="row"><h3>ZingHR · HRMS Pilot</h3><time>Oct 2026</time></div><div class="out">Rs 2 lakh pilot fee waived</div><p>Both HRMS vendors now pilot on equal terms.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="ch" id="leadership">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 5</span><h2>A Professional Leadership Team</h2></div>
+      <p class="intro">7 senior roles were designed from scratch, each with a job description and a scored skill matrix, then searched through 5 partner firms. 3 leaders are signed and the CHRO has accepted the offer in principle.</p>
+    </div>
+    <div class="roles">
+      <div class="role rv"><h3>Business Head, Dairy</h3><span class="pill p-ok">Signed</span><span class="who">Mr Venkataramani Santhanam</span><span class="when">Former Gyan Dairy</span></div>
+      <div class="role rv"><h3>Business Head, Ice Cream</h3><span class="pill p-ok">Signed</span><span class="who">Mr Aditya Mittal</span><span class="when">From Kellanova India</span></div>
+      <div class="role rv"><h3>Sales Head, Namkeen &amp; Bakery</h3><span class="pill p-ok">Signed</span><span class="who">Mr Pravesh Kumar Mittal</span><span class="when">From Gokul Snacks; finalised October 2026</span></div>
+      <div class="role rv"><h3>Chief Human Resources Officer</h3><span class="pill p-go">Offer accepted in principle</span><span class="who">Final offer issued 8 October 2026</span><span class="when">In-person meeting with the promoters being scheduled</span></div>
+      <div class="role rv"><h3>Chief Financial Officer</h3><span class="pill p-go">Interviewing</span><span class="who">First CFO for Dinshaw's, run with Executive Access</span><span class="when">Shortlist of 2 with the promoters, October 2026</span></div>
+      <div class="role rv"><h3>Head, Information Technology</h3><span class="pill p-go">Interviewing</span><span class="who">Owner of SAP, plant IT and data</span><span class="when">Recommended candidate put to the promoters, 19 October 2026</span></div>
+      <div class="role rv"><h3>Head, Quick Commerce &amp; Modern Trade</h3><span class="pill p-wait">Search active</span><span class="who">The Channel Commercial Head role, sharpened</span><span class="when">Updated brief shared with Questa and SaShr, 9 October 2026</span></div>
+    </div>
+    <ol class="process rv" aria-label="The hiring process used for every role">
+      <li>Job description and scored skill matrix</li>
+      <li>Signed mandate with a search partner</li>
+      <li>Full candidate dossier</li>
+      <li>Panel interviews</li>
+      <li>Salary verification</li>
+      <li>A full day in Nagpur with a plant visit</li>
+    </ol>
+    <p class="src rv" style="margin-top:14px">Search partners managed by STAIR: EMA Partners, Executive Access, Questa Search Partners, SaShr Consultants and Prompt Personnel</p>
+  </div>
+</section>
+
+<!-- DECISIONS -->
+<section class="ch band" id="decisions">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 6</span><h2>The Calls That Shaped the Company</h2></div>
+      <p class="intro">Major decisions taken by the promoters with STAIR's input, in the order they were made. Filter by workstream.</p>
+    </div>
+    <div class="chips" id="dchips" role="group" aria-label="Filter decisions by workstream"></div>
+    <ul class="reg" id="dlist"></ul>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="ch" id="research">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 7</span><h2>Where the Next Growth Comes From</h2></div>
+      <p class="intro">STAIR's research asked 1 question: where Dinshaw's next profitable growth will come from beyond its current ice cream and milk portfolio. The answer is built from primary research, case studies and product economics.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card rc feature rv">
+        <span class="lbl">New Product Development · 1 October 2026</span>
+        <h3>Skyr and Probiotic Dahi: The High-Protein Opportunity</h3>
+        <p>Dinshaw's will develop a high-protein, low-fat, no-added-sugar skyr, and a separate unflavoured, low-fat probiotic dahi. Each product carries 1 claim: skyr carries protein, dahi carries gut health.</p>
+      </div>
+      <div class="card rc rv"><span class="lbl">Why skyr</span><h3>About Double the Protein</h3><p>Greek yoghurt is crowded and needs heavy marketing; skyr sells on protein and only 2 brands sell it in India today.</p></div>
+      <div class="card rc rv" style="grid-column:1/-1">
+        <span class="lbl">The skyr specification</span>
+        <div class="spec tnum">
+          <div><b>10–12 g</b><span>protein per 100 g</span></div>
+          <div><b>0.2–1.5%</b><span>fat; no added sugar, no stevia</span></div>
+          <div><b>30–42 days</b><span>shelf life, in cups only</span></div>
+          <div><b>Rs 45–65</b><span>per 100 g cup, priced at parity</span></div>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3>The Protein Ladder</h3>
+        <p>Protein per 100 g, from the NPD note.</p>
+        <svg class="chart" id="ch-protein" viewBox="0 0 360 200" role="img" aria-label="Protein ranges: dahi 3 to 5.5 g, Greek yoghurt 8 to 10 g, skyr 10 to 13 g"></svg>
+      </div>
+      <div class="card rv">
+        <h3>India's Casein Exports</h3>
+        <p>Tonnes a year; casein is pursued only alongside a whey and lactose plant.</p>
+        <svg class="chart" id="ch-casein" viewBox="0 0 360 200" role="img" aria-label="India casein exports by year"></svg>
+      </div>
+      <div class="card rv">
+        <h3>Chobani: Protein at Scale</h3>
+        <p>Net sales, US$ billion. Greek yoghurt went from under 1% of US yoghurt to 50% in a decade.</p>
+        <svg class="chart" id="ch-chobani" viewBox="0 0 360 200" role="img" aria-label="Chobani net sales 2019 to 2026 estimate"></svg>
+      </div>
+    </div>
+
+    <h3 class="sub rv">Primary Research: Spain and Malta</h3>
+    <p class="lead rv">Freezer and chilled aisles photographed and filmed in September 2026: 91 images, 18 videos and conversations with 8 to 9 retailers. Ideas taken forward: drip-free paper lolly packs, offers printed on packs, vertical freezers and mini milk-ice sticks.</p>
+    <div class="grid g4 r34" id="es-grid">
+      <figure class="rv"><button class="ph" data-cap="Magnum Pink Lemonade 3-pack, Carrefour Spain: €6.45"><img src="es/es02.jpg" alt="Magnum multipack in a Spanish freezer" loading="lazy"></button><figcaption>Magnum Pink Lemonade 3-pack, €6.45</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Pirulo Fantasmikos box, Carrefour Spain: €6.59"><img src="es/es01.jpg" alt="Pirulo ice lolly box" loading="lazy"></button><figcaption>Pirulo Fantasmikos box, €6.59</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Frigo Chuches, sold in bags of 5"><img src="es/es03.jpg" alt="Frigo Chuches lollies" loading="lazy"></button><figcaption>Frigo Chuches, bags of 5</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Nuii by Froneri, Malta: Salted Caramel & Macadamia and Indian Mango, €4.10 each"><img src="es/es06.jpg" alt="Nuii ice cream sticks" loading="lazy"></button><figcaption>Nuii Indian Mango, Malta, €4.10</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Oreo ice cream, Malta: stick €3.90, sandwich €3.50"><img src="es/es07.jpg" alt="Oreo ice cream in a freezer" loading="lazy"></button><figcaption>Oreo stick €3.90, sandwich €3.50</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Toblerone ice cream stick, Malta: €3.90"><img src="es/es08.jpg" alt="Toblerone ice cream" loading="lazy"></button><figcaption>Toblerone stick, €3.90</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Monte cookie stick by Zott, Malta: €3.80"><img src="es/es09.jpg" alt="Monte ice cream" loading="lazy"></button><figcaption>Monte cookie stick, €3.80</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Maxibon, Nestlé freezer, Malta: poster price €3.95"><img src="es/es10.jpg" alt="Maxibon poster and freezer" loading="lazy"></button><figcaption>Maxibon, €3.95</figcaption></figure>
+    </div>
+    <div class="vids" style="margin-top:18px">
+      <figure class="vid rv"><video src="esv/skyrdrink.mp4" poster="esv/skyrdrink.jpg" controls muted playsinline preload="none"></video><figcaption>Milsani High Protein Skyr Drink, ALDI</figcaption></figure>
+      <figure class="vid rv"><video src="esv/milsani0.mp4" poster="esv/milsani0.jpg" controls muted playsinline preload="none"></video><figcaption>Milsani 0% natural yoghurt, 6 × 125 g for €0.89</figcaption></figure>
+      <figure class="vid rv"><video src="esv/kefir.mp4" poster="esv/kefir.jpg" controls muted playsinline preload="none"></video><figcaption>Pastoret Kéfir, ALDI</figcaption></figure>
+      <figure class="vid rv"><video src="esv/chuches.mp4" poster="esv/chuches.jpg" controls muted playsinline preload="none"></video><figcaption>Frigo Chuches lollies</figcaption></figure>
+    </div>
+
+    <h3 class="sub rv">More Research and Analysis</h3>
+    <div class="grid g3">
+      <div class="card rv"><span class="lbl muted">Dairy · October 2026</span><h3>Protein, Low Fat and Lactose-Free</h3><p>A catalogue of 26 protein, 15 low-fat and 13 lactose-free product types, with the gaps in rural and Tier-2 markets.</p></div>
+      <div class="card rv"><span class="lbl muted">Growth · July 2026</span><h3>Africa Value-Added Dairy</h3><p>8 focus countries across 4 regions; a 3-step entry from export to local packing to local manufacturing, led by ghee.</p></div>
+      <div class="card rv"><span class="lbl muted">Retail · October 2026</span><h3>3 Own-Retail Formats</h3><p>An Ice Cream Studio, a Company Store and a franchised Kiosk, each with a separate job and a daily sales floor.</p></div>
+      <div class="card rv"><span class="lbl muted">Quick commerce · October 2026</span><h3>Dcluttr and Alternatives</h3><p>An evaluation of quick commerce analytics tools across 13 platforms, with a pilot to test data accuracy.</p></div>
+      <div class="card rv"><span class="lbl muted">Economics · October 2026</span><h3>Value per Litre of Milk</h3><p>Each product judged by net value per litre after channel, cold-chain and promotion costs.</p></div>
+      <div class="card rv"><span class="lbl muted">Case study · April and May 2026</span><h3>Milky Mist</h3><p>How a regional dairy built a value-added portfolio and scaled it, in 3 versions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<section class="ch band" id="governance">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 8</span><h2>A Board for the Next Chapter</h2></div>
+      <p class="intro">As the professional team lands, the promoters keep strategy, capital, appointments and governance, and the professionals own their plans. 2 frameworks set this out, both reflecting the promoters' decisions of 3 October 2026.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card rv">
+        <h3>Board Structure and Governance</h3>
+        <p>10 seats: Chairman Mr Jamashp Bapuna, Managing Director Mr Jimmy Rana, Executive Director Mr Zervin Rana, with Ramin and Parvez as directors, 2 independent directors and 3 experts to be identified.</p>
+        <div class="hb" id="hb-board" style="margin-top:16px"></div>
+        <ul class="facts">
+          <li>2 committees: a quarterly Audit Committee and an annual review of the commercial plan</li>
+          <li>3 stages: governance board now, statutory board in year 1, full statutory board by year 3</li>
+          <li>Freezers from internal accruals, the factory from term debt</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <h3>Promoter-Professional Engagement</h3>
+        <p>Each professional writes their own plan, budget and OKRs; the board approves once a year. Promoter time with each leader steps down as they settle in.</p>
+        <div class="hb" id="hb-cadence" style="margin-top:16px"></div>
+        <ul class="facts">
+          <li>Test at month 3: the MD can step away from operations for a month and nothing slows</li>
+          <li>At 12 months, a CMO, CTO and plant heads join</li>
+          <li>By year 3, a leadership team of 11</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SWEDEN -->
+<section class="ch" id="sweden">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 9</span><h2>The Europe Study Tour</h2></div>
+      <p class="intro">Mr Zervin Rana and Verma sir travelled with Mr Shubham Saraff to test Dinshaw's thesis for a dedicated yoghurt plant with Tetra Pak in Sweden, then walked through one of Scandinavia's most automated ice cream plants in Norway.</p>
+    </div>
+
+    <div class="sw-hero rv">
+      <div class="txt">
+        <span class="lbl" style="color:#E9DDFB">Sweden · Gjelleråsen · Oslo · October 2026</span>
+        <h3>Yoghurt, Skyr and the Chilled Carton</h3>
+        <p>STAIR went in with 272 questions; the team came back with a requirements list, a capex range, 4 process flows and a clear sequence for the new plant.</p>
+      </div>
+      <video src="../vid/hero_w11.mp4" poster="../img/hero_p07.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Ice cream line at Diplom-Is"></video>
+    </div>
+
+    <div class="route rv">
+      <div><b>Breakfast</b><span>Process expert on the planned skyr plant: sizing, capex, commissioning</span></div>
+      <div><b>Tetra Top</b><span>The chilled carton system, 12 global cases and a protein tasting</span></div>
+      <div><b>Yoghurt Process</b><span>5 process routes, 8 world varieties, concentration economics</span></div>
+      <div><b>Night Session</b><span>Dinshaw's product slate, shelf-life brief and process flows</span></div>
+      <div><b>Norway</b><span>Diplom-Is plant walk and an Oslo shelf survey</span></div>
+    </div>
+
+    <div class="grid g3 r34" style="margin-top:24px">
+      <figure class="rv"><button class="ph" data-cap="Mr Zervin Rana and Mr Shubham Saraff beneath the Indian flag at the Tetra Pak entrance, Sweden"><img src="../img/r04.jpg" alt="Two visitors beneath the flags at Tetra Pak" loading="lazy"></button><figcaption>Beneath the Indian flag at Tetra Pak, Sweden.</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Arriving at Tetra Pak, Sweden"><img src="../img/r05.jpg" alt="Two visitors at the Tetra Pak building" loading="lazy"></button><figcaption>Arriving at the main entrance.</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="World Trade Center, Sweden"><img src="../img/r10.jpg" alt="Visitors at the World Trade Center, Sweden sign" loading="lazy"></button><figcaption>World Trade Center, Sweden.</figcaption></figure>
+    </div>
+
+    <h3 class="sub rv">Preparing the Questions</h3>
+    <p class="lead rv">Before the trip, STAIR built an exhaustive question bank (222 questions), then extended it with Mr Jimmy Rana's brief on high-protein, no-sugar yoghurt and the drinkable route into India.</p>
+    <div class="grid g2">
+      <div class="card rv">
+        <h3>272 Questions for Tetra Pak</h3>
+        <p>Questions by site, with those from Mr Jimmy Rana's brief.</p>
+        <div class="hb" id="hb-qb" style="margin-top:16px"></div>
+      </div>
+      <div class="card rv">
+        <h3>Largest Topics in Sweden</h3>
+        <p>Questions per section, yoghurt sessions.</p>
+        <div class="hb" id="hb-qtopics" style="margin-top:16px"></div>
+      </div>
+    </div>
+
+    <h3 class="sub rv">Top 10 Insights</h3>
+    <p class="lead rv">The visit confirmed that Dinshaw's has a clear entry point in drinkable and high-protein yoghurt, and that the requirements list for the line is largely ready.</p>
+    <ol class="top10 rv">
+      <li><b>Drinkable is the white space</b><span>Lassi is the mass-market route in; drinkable yoghurt is the premium layer once consumers are ready.</span></li>
+      <li><b>Protein is the global premium driver</b><span>Valio, Lindahls and Danone lead with 25 to 26 g per pack, and India's vegetarian protein gap makes the case stronger.</span></li>
+      <li><b>India's yoghurt journey runs in reverse</b><span>Globally plain moves to drinkable then spoonable; India starts with set dahi and needs its own playbook.</span></li>
+      <li><b>Naming drives adoption</b><span>Probiotic curd, high-protein skyr and lassi are clearer labels than "yoghurt".</span></li>
+      <li><b>Tetra Top fits the shelf-life ambition</b><span>45 to 60 days below 8°C without an aseptic line; the real test in India is the cold chain.</span></li>
+      <li><b>Design for 60 days, declare less</b><span>45 days at 4°C, and about 15 days at 10 to 12°C once product leaves Dinshaw's control.</span></li>
+      <li><b>Inclusions carry a large premium</b><span>Chilled yoghurt with pieces sells about 60% above plain in China, and few Tetra Top products carry pieces yet.</span></li>
+      <li><b>Size the plant for 120%</b><span>Protein concentration rarely delivers paper yields, so capacity is set after the process is frozen.</span></li>
+      <li><b>Capex closer to Rs 30 to 34 Cr</b><span>Once building, Bactofuge and filling are included; to be validated with supplier quotes.</span></li>
+      <li><b>Cheese and ice cream formats are structural growth</b><span>Cheddar is expected to double by 2030; extrusion shapes are hard to copy, inclusions are not.</span></li>
+    </ol>
+
+    <h3 class="sub rv">The Numbers From Sweden</h3>
+    <div class="grid g3">
+      <div class="card rv">
+        <h3>Working Capex Estimate</h3>
+        <p>Rs Cr, midpoints of the ranges discussed.</p>
+        <div class="hb" id="hb-capex" style="margin-top:16px"></div>
+        <p class="src">Total Rs 30 to 34 Cr; to validate with quotes</p>
+      </div>
+      <div class="card rv">
+        <h3>Separator vs Ultrafilter</h3>
+        <p>kg per hour to make 1,000 kg/h of 10% protein product from 3.5% protein milk.</p>
+        <svg class="chart" id="ch-conc" viewBox="0 0 360 210" role="img" aria-label="Nozzle separator needs 3,031 kg/h feed and gives 2,031 kg/h whey; ultrafilter needs 2,857 and gives 1,857"></svg>
+        <p class="src">UF saves 174 kg/h of milk and of acid whey</p>
+      </div>
+      <div class="card rv">
+        <h3>The Price of Pieces</h3>
+        <p>Chilled drinking yoghurt, China, RMB per litre.</p>
+        <div class="hb" id="hb-particles" style="margin-top:16px"></div>
+        <p class="src">About 62% more per litre with particles (Nielsen 2019)</p>
+      </div>
+    </div>
+
+    <div class="split rv">
+      <figure><button class="ph" style="aspect-ratio:16/10" data-cap="Add particles to premiumise products in Tetra Top"><img src="../img/l20.jpg" alt="Slide on adding particles to premiumise products" loading="lazy"></button></figure>
+      <div>
+        <span class="lbl" style="color:var(--purple)">The Tetra Top session</span>
+        <h3 style="font-size:1.9rem;font-weight:800;text-transform:uppercase;margin:6px 0 10px">The Chilled Carton in Numbers</h3>
+        <ul class="facts" style="--pop:var(--purple)">
+          <li>45 to 60 days of chilled shelf life below 8°C; chilled, not aseptic</li>
+          <li>About 9,000 packs an hour; a size change in about 5 minutes</li>
+          <li>2 sides: 1 product across both, or 2 products from 2 lines</li>
+          <li>A slim 250 ml pack reads premium; a squat 250 ml reads everyday, so 1 line can run 2 price points</li>
+          <li>Packaging is about 4% of a EUR 2 yoghurt in Europe</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid g4 r34" style="margin-top:24px">
+      <figure class="rv"><button class="ph" data-cap="Valio PROfeel Protein Milkshake, pear & vanilla: 25 g protein, no added sugar, lactose free"><img src="../img/l10.jpg" alt="Valio PROfeel pear and vanilla" loading="lazy"></button><figcaption>Valio PROfeel, 25 g protein</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Lindahls Protein+ Chocolate Crush: 26 g protein, 330 ml, lactose free"><img src="../img/l14.jpg" alt="Lindahls Protein+" loading="lazy"></button><figcaption>Lindahls Protein+, 26 g protein</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Arla Superkrämig Grekisk Yoghurt, 0% fat, 9.5 g protein per 100 g"><img src="../img/p18.jpg" alt="Arla Greek yoghurt" loading="lazy"></button><figcaption>Arla Greek-style, 9.5 g protein</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="ProPud LyxKvarg: 20 g protein, no added sugar, lactose free"><img src="../img/p24.jpg" alt="ProPud quark" loading="lazy"></button><figcaption>ProPud quark, 20 g protein</figcaption></figure>
+    </div>
+
+    <h3 class="sub rv">Dinshaw's Process Flows, Written in Sweden</h3>
+    <p class="lead rv">In the night session Mr Zervin Rana walked through the draft product slate. All 4 flows share 1 front end; STAIR later turned them into factory flow charts.</p>
+    <div class="flows rv">
+      <div class="flow"><h4>Dahi</h4><div class="base">Fat 3.5% · Protein 4.5% · RO</div><ol><li>Bactofuge, homogenise, pasteurise</li><li>Chill to 45°C</li><li>Add culture</li><li>Fill in cups</li><li>Incubate in the cup</li><li>Blast chill</li><li>Store at 4°C</li></ol></div>
+      <div class="flow"><h4>Greek Yoghurt</h4><div class="base">Protein 7–8% · Fat under 2%</div><ol><li>Pre-concentrate by RO or UF</li><li>Ferment</li><li>Break the curd</li><li>Strain whey</li><li>Add sugar and fruit paste</li><li>Thermise</li><li>Fill with fruit dosing</li></ol></div>
+      <div class="flow"><h4>Skyr</h4><div class="base">Protein 10–12% · Fat under 1%</div><ol><li>Skimmed milk, Bactofuge, pasteurise</li><li>Add culture and rennet</li><li>Ferment</li><li>Strain whey</li><li>Whisk smooth</li><li>Thermise</li><li>Fill cups, fruit dice added</li></ol></div>
+      <div class="flow"><h4>Lassi</h4><div class="base">Recipe-based standardisation</div><ol><li>Bactofuge, homogenise, pasteurise</li><li>Chill to 45°C</li><li>Ferment</li><li>Break curd, add sugar</li><li>Thermise</li><li>Add flavour</li><li>Fill</li></ol></div>
+    </div>
+    <div class="grid g4 r43" style="margin-top:20px">
+      <figure class="rv"><button class="ph" data-cap="Notebook: the product brief, as written in Sweden"><img src="../img/lists.jpg" alt="Handwritten product brief" loading="lazy"></button><figcaption>The brief, as written</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Notebook: skyr process"><img src="../img/skyrr.jpg" alt="Handwritten skyr process" loading="lazy"></button><figcaption>Skyr, in the notebook</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Fermented Dairy Process Flow Charts: skyr, fermentation to dispatch"><img src="docs/flow-3.jpg" alt="Skyr flow chart page" loading="lazy" style="object-position:top"></button><figcaption>Skyr flow chart</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Fermented Dairy Process Flow Charts: Greek yoghurt, fermentation to dispatch"><img src="docs/flow-7.jpg" alt="Greek yoghurt flow chart page" loading="lazy" style="object-position:top"></button><figcaption>Greek yoghurt flow chart</figcaption></figure>
+    </div>
+
+    <h3 class="sub rv">Inside Diplom-Is, Norway</h3>
+    <p class="lead rv">Established 1930 and owned by TINE SA: turnover of NOK 1,366 million in 2025 with 315 man-years, certified to FSSC 22000. Filling, moulding, flow wrapping, robot packing and automated palletising into a racked cold store.</p>
+    <div class="vids">
+      <figure class="vid rv"><video src="../vid/v02.mp4" poster="../vid/v02.jpg" controls muted playsinline preload="none"></video><figcaption>Walking the line in the clean zone</figcaption></figure>
+      <figure class="vid rv"><video src="../vid/v13.mp4" poster="../vid/v13.jpg" controls muted playsinline preload="none"></video><figcaption>Robot packing of chocolate tubs</figcaption></figure>
+      <figure class="vid rv"><video src="../vid/v05.mp4" poster="../vid/v05.jpg" controls muted playsinline preload="none"></video><figcaption>Cup filling</figcaption></figure>
+      <figure class="vid rv"><video src="../vid/w05.mp4" poster="../vid/w05.jpg" controls muted playsinline preload="none"></video><figcaption>The pallet wrapper</figcaption></figure>
+    </div>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card rv">
+        <h3>Energy per Kilogram</h3>
+        <p>kWh per net kg produced. A benchmark for Dinshaw's own plants.</p>
+        <svg class="chart" id="ch-dienergy" viewBox="0 0 360 190" role="img" aria-label="Diplom-Is specific energy 1.2 in 2023, 1.1 in 2024, 1.0 in 2025"></svg>
+      </div>
+      <div class="card rv">
+        <h3>Progress to 2030 Goals</h3>
+        <p>Achieved so far against each target, %.</p>
+        <div class="hb" id="hb-goals" style="margin-top:16px"></div>
+      </div>
+    </div>
+    <div class="grid g4 r43" style="margin-top:18px">
+      <figure class="rv"><button class="ph" data-cap="Diplom-Is, Gjelleråsen"><img src="../img/g36.jpg" alt="Diplom-Is building" loading="lazy"></button></figure>
+      <figure class="rv"><button class="ph" data-cap="A Motoman robot cell"><img src="../img/g09.jpg" alt="Robot cell" loading="lazy"></button></figure>
+      <figure class="rv"><button class="ph" data-cap="Moulding carousel"><img src="../img/g06.jpg" alt="Moulding carousel" loading="lazy"></button></figure>
+      <figure class="rv"><button class="ph" data-cap="The history wall, starting from 1920"><img src="../img/g21.jpg" alt="History wall" loading="lazy"></button></figure>
+    </div>
+
+    <h3 class="sub rv">On the Norwegian Shelf</h3>
+    <div class="grid g4 r34">
+      <figure class="rv"><button class="ph" data-cap="YT Proteinpudding by TINE: 20 g protein per 190 g cup, lactose free, ambient"><img src="../img/n17.jpg" alt="YT Proteinpudding" loading="lazy"></button><figcaption>YT Proteinpudding, 20 g protein, ambient</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="GO'MORGEN mango and banana yoghurt with granola"><img src="../img/n24.jpg" alt="GO'MORGEN yoghurt" loading="lazy"></button><figcaption>Yoghurt with a granola topping</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="A twin-pot yoghurt with a separate topping"><img src="../img/n15.jpg" alt="Twin-pot yoghurt" loading="lazy"></button><figcaption>Twin-pot with a separate topping</figcaption></figure>
+      <figure class="rv"><button class="ph" data-cap="Hand-made Jersey butter beside TINE Meierismør"><img src="../img/g43.jpg" alt="Butter on the shelf" loading="lazy"></button><figcaption>A premium butter tier</figcaption></figure>
+    </div>
+
+    <h3 class="sub rv">What Happens Next From the Visit</h3>
+    <p class="lead rv">The single most important next step is sending Tetra Pak the measurable requirements list; most other items feed into it.</p>
+    <div class="grid g3">
+      <div class="card rv"><h3>Requirements and Line</h3><ul class="todo">
+        <li><span>Send the requirements list to Tetra Pak<em>Dinshaw's, with STAIR</em></span></li>
+        <li><span>Provide the raw-milk bacterial load<em>Verma sir</em></span></li>
+        <li><span>Fix skyr taste and texture, then the process<em>Dinshaw's</em></span></li>
+        <li><span>Choose the Tetra Top pack family<em>Dinshaw's</em></span></li>
+      </ul></div>
+      <div class="card rv"><h3>Testing</h3><ul class="todo">
+        <li><span>60-day shelf-life run at the Product Development Centre<em>Dinshaw's with Tetra Pak</em></span></li>
+        <li><span>Lock the method behind the drinkable test batch<em>Dinshaw's plant team</em></span></li>
+        <li><span>Test drinkable yoghurt price against lassi<em>STAIR can support</em></span></li>
+      </ul></div>
+      <div class="card rv"><h3>Suppliers and Market</h3><ul class="todo">
+        <li><span>Validate Rs 30 to 34 Cr capex with quotes<em>Dinshaw's, with STAIR</em></span></li>
+        <li><span>Benchmark against SPX FLOW; visit a running plant<em>Dinshaw's</em></span></li>
+        <li><span>Tetra Pak market intelligence session<em>STAIR to draft questions</em></span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="ch band" id="documents">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 10</span><h2>The Document Library</h2></div>
+      <p class="intro">The key reports and frameworks behind the work, on the STAIR letterhead. Tap a cover to enlarge it; open "Key Points" for the substance.</p>
+    </div>
+    <div class="chips" id="pchips" role="group" aria-label="Filter key documents"></div>
+    <div class="docs" id="pdocs"></div>
+
+    <h3 class="sub rv">Every Deliverable, in Order</h3>
+    <div class="chips" id="lchips" role="group" aria-label="Filter deliverables"></div>
+    <ul class="doclist" id="llist"></ul>
+
+    <h3 class="sub rv">Companion Sites</h3>
+    <p class="lead rv">The pages built for Dinshaw's along the way. Each opens in a new tab.</p>
+    <div class="sites rv">
+      <a class="site" href="../" target="_blank" rel="noopener"><b>Sweden Yoghurt Field Notes</b><span>Every session, product and process flow from Sweden and Norway, with all photos and videos.</span><em>Open site ↗</em></a>
+      <a class="site" href="https://claude.ai/artifact/3VAu5sd2w66csmBdzdFmfa" target="_blank" rel="noopener"><b>Spanish Ice Cream &amp; Yoghurt Research</b><span>The full Spain and Malta shelf study: 25 entries with prices, images and videos.</span><em>Open site ↗</em></a>
+      <a class="site" href="https://claude.ai/artifact/C3v1wRBxAYQRRNgrUF3HMp" target="_blank" rel="noopener"><b>Tetra Pak Question Bank</b><span>The question bank for the Sweden (yoghurt) and Denmark (ice cream) sessions.</span><em>Open site ↗</em></a>
+      <a class="site" href="https://claude.ai/artifact/8PWqWjfcmfBs2YkmBuRsUB" target="_blank" rel="noopener"><b>Sweden Visit: Insights and To-Dos</b><span>12 chapters of insights and 40+ owned actions from the visit.</span><em>Open document ↗</em></a>
+      <a class="site" href="https://claude.ai/artifact/Wm1hTonLFrWmozzSoV7fSs" target="_blank" rel="noopener"><b>Nagpur Visit Minutes</b><span>Minutes of Day 1 of the 30 September 2026 review.</span><em>Open site ↗</em></a>
+      <a class="site" href="https://claude.ai/artifact/3JGgmRfAVG9z5tZHiV1zDo" target="_blank" rel="noopener"><b>Dinshaw's Transformation Journey</b><span>The October 2026 board summary of the engagement.</span><em>Open site ↗</em></a>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="ch" id="next">
+  <div class="wrap">
+    <div class="ch-head rv">
+      <div><span class="chip-n">Chapter 11</span><h2>What Comes Next</h2></div>
+      <p class="intro">The steps already scheduled for the rest of FY 2026-27.</p>
+    </div>
+    <ol class="next">
+      <li class="rv"><time>Late Oct 2026</time><b>Requirements to Tetra Pak</b><span>The measurable brief for the yoghurt and skyr line.</span></li>
+      <li class="rv"><time>27–29 Oct 2026</time><b>Instamart, Bengaluru</b><span>Working session with the Instamart team and Mr Zervin Rana.</span></li>
+      <li class="rv"><time>Oct–Nov 2026</time><b>HRMS pilots</b><span>ZingHR and BlueTree tested 1 after the other on 2 months of plant data.</span></li>
+      <li class="rv"><time>Nov 2026</time><b>Leadership team complete</b><span>Close the CFO, Head IT and Quick Commerce &amp; Modern Trade roles.</span></li>
+      <li class="rv"><time>Dec 2026</time><b>Quick commerce intelligence</b><span>Competitor tracking across 23 platforms goes live.</span></li>
+      <li class="rv"><time>Q3 FY 2026-27</time><b>Own retail and skyr launch base</b><span>First Dinshaw's stores, also the launch base for yoghurt.</span></li>
+      <li class="rv"><time>Jan–Feb 2027</time><b>SAP S/4HANA go-live</b><span>With product-wise costing and volume-based logistics allocation.</span></li>
+      <li class="rv"><time>Year 1</time><b>Statutory board</b><span>The governance board converts, with independent directors seated.</span></li>
+    </ol>
+
+    <h3 class="sub rv">Annexure: Abbreviations</h3>
+    <div class="gloss rv">
+      <p><b>CFO</b> Chief Financial Officer</p><p><b>CHRO</b> Chief Human Resources Officer</p><p><b>CMO / CTO</b> Chief Marketing / Technology Officer</p><p><b>Cr</b> Crore (10 million)</p><p><b>ED / MD</b> Executive / Managing Director</p><p><b>ERP</b> Enterprise Resource Planning</p><p><b>FSSC</b> Food Safety System Certification</p><p><b>HRMS</b> Human Resources Management System</p><p><b>IoT</b> Internet of Things</p><p><b>NPD</b> New Product Development</p><p><b>OKR</b> Objectives and Key Results</p><p><b>P&amp;L</b> Profit and Loss statement</p><p><b>RFID</b> Radio-Frequency Identification</p><p><b>RO</b> Reverse Osmosis, which removes water to concentrate milk</p><p><b>SAP S/4HANA</b> SAP's current ERP suite</p><p><b>SFA / DMS</b> Sales Force Automation / Distributor Management System</p><p><b>SKU</b> Stock Keeping Unit</p><p><b>UF</b> Ultrafiltration, a membrane that holds back protein</p><p><b>UHT</b> Ultra-High Temperature processing</p><p><b>VADP</b> Value-Added Dairy Products</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="end">Dinshaw's next chapter, built 1 step at a time.</div>
+    <div class="sig">STAIR Digital · Prepared for the promoters of Dinshaw's<br>Updated 22 October 2026 · Photographs taken on site<br>42 Free Press House, Nariman Point, Mumbai</div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Image viewer">
+  <div class="lb-in">
+    <img id="lbimg" alt="">
+    <p class="lb-cap" id="lbcap"></p>
+  </div>
+  <button class="lb-btn lb-x" id="lbx" aria-label="Close">✕</button>
+  <button class="lb-btn lb-p" id="lbp" aria-label="Previous">‹</button>
+  <button class="lb-btn lb-n" id="lbn" aria-label="Next">›</button>
+</dialog>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var NS='http://www.w3.org/2000/svg';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function css(v){return 'var('+v+')';}
+
+  /* ---------- horizontal bars ---------- */
+  function hbar(id,rows,opt){
+    var box=document.getElementById(id);if(!box)return;opt=opt||{};
+    var max=opt.max||Math.max.apply(null,rows.map(function(r){return r[1]}));
+    rows.forEach(function(r){
+      var row=document.createElement('div');row.className='hb-row';
+      var w=Math.max(1.5,r[1]/max*100);
+      row.innerHTML='<span>'+r[0]+'</span><span class="t"><i class="grow" style="width:'+w+'%;'+(r[3]?'background:'+r[3]:'')+'"></i></span><b>'+(r[2]!=null?r[2]:r[1])+'</b>';
+      box.appendChild(row);
+    });
+  }
+  hbar('hb-ws',[['Leadership hiring',375],['Quick commerce & marketing',78,null,css('--amber')],['Factory & digital',72,null,css('--blue')],['Strategy, governance & research',68,null,css('--purple')]]);
+  hbar('hb-kind',[['Email coordination',344,null,css('--c-mail')],['Meetings, calls, interviews',133,null,css('--c-meet')],['Documents and reports',116,null,css('--c-doc')]]);
+  hbar('hb-blinkit',[['Apr–Sep 2025',0.6,'Rs 0.6 Cr',css('--muted')],['Apr–Sep 2026',5,'Rs 5 Cr']]);
+  hbar('hb-pune',[['Before',4,'Rs 4 L',css('--muted')],['Sep 2026',11.5,'Rs 11.5 L']]);
+  hbar('hb-ghee',[['Spend',0.5,'Rs 0.5 L',css('--muted')],['Revenue',15,'Rs 15 L']]);
+  hbar('hb-energy',[['Investment',1.89,'Rs 1.89 Cr',css('--muted')],['Yearly saving',2.38,'Rs 2.38 Cr',css('--ok')]]);
+  hbar('hb-work',[['Seasonal at peak',2500,'2,500',css('--amber')],['Blue collar',254,'254',css('--blue')],['White collar',184,'184',css('--purple')]]);
+  hbar('hb-media',[['Performance cap to Mar 2027',350,'Rs 3.5 Cr'],['Festive: Blinkit',24,'Rs 24 L',css('--amber')],['Festive: Meta and YouTube',16,'Rs 16 L',css('--blue')],['Ring-fenced for dairy',50,'Rs 50 L',css('--purple')]]);
+  hbar('hb-board',[['Promoter family',5,'5 seats',css('--red')],['Independent experts (to identify)',3,'3 seats',css('--muted')],['Independent directors',2,'2 seats',css('--blue')]],{max:5});
+  hbar('hb-cadence',[['Month 1',2,'2 a week'],['Month 2',1,'1 a week',css('--blue')],['Month 3 onwards',0.5,'Fortnightly',css('--purple')]],{max:2});
+  hbar('hb-qb',[['Sweden, yoghurt',164,'164',css('--purple')],['Denmark, ice cream',108,'108',css('--blue')],['From Mr Jimmy Rana\'s brief',50,'50',css('--red')]]);
+  hbar('hb-qtopics',[['Market trends',18],['Customers & reference plants',14],['Skyr process',12],['Formulation & taste',10],['Cultures & probiotic dahi',10],['Whey, side-streams & casein',10],['Shelf life & cold chain',10],['Plant layout & flow',10]].map(function(r){r[3]=css('--purple');return r;}));
+  hbar('hb-capex',[['Processing',17.5,'17–18',css('--purple')],['Building',8,'8',css('--blue')],['Filling',5,'4–6',css('--amber')]]);
+  hbar('hb-particles',[['Plain',16.7,'16.7',css('--muted')],['With particles',27,'27',css('--purple')]]);
+  hbar('hb-goals',[['Recyclable packaging',94.5,'94.5 of 100',css('--ok')],['Less food waste',16.8/25*100,'16.8 of 25',css('--amber')],['Lower own emissions',15/42*100,'15 of 42',css('--red')]],{max:100});
+
+  /* ---------- monthly activity, stacked columns ---------- */
+  (function(){
+    var svg=document.getElementById('ch-activity');if(!svg)return;
+    var M=['Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'];
+    var Y=['2025','','','','2026','','','','','','','','',''];
+    var meet=[0,9,6,15,17,10,19,13,9,5,8,6,10,6], doc=[3,5,6,11,3,3,13,10,14,1,16,9,12,10], mail=[0,0,1,2,0,0,0,9,39,35,48,35,106,69];
+    var W=900,H=330,l=40,r=10,t=16,b=50,cw=(W-l-r)/14,max=130;
+    function y(v){return t+(H-t-b)*(1-v/max);}
+    [0,25,50,75,100,125].forEach(function(v){svg.appendChild(el('line',{x1:l,x2:W-r,y1:y(v),y2:y(v),class:'ax'}));svg.appendChild(el('text',{x:l-8,y:y(v)+4,'text-anchor':'end'},v));});
+    for(var i=0;i<14;i++){
+      var x=l+i*cw+cw*.18,w=cw*.64,base=0,g=el('g',{});
+      [[meet[i],'--c-meet'],[doc[i],'--c-doc'],[mail[i],'--c-mail']].forEach(function(s){
+        if(!s[0])return;var y0=y(base+s[0]),h=y(base)-y0;
+        var rc=el('rect',{x:x,y:y0,width:w,height:Math.max(h,0.5),fill:css(s[1]),class:'growy'});rc.style.transitionDelay=(i*40)+'ms';g.appendChild(rc);base+=s[0];});
+      var tot=meet[i]+doc[i]+mail[i];
+      g.appendChild(el('text',{x:x+w/2,y:y(tot)-6,'text-anchor':'middle',class:'val'},tot));
+      g.appendChild(el('text',{x:x+w/2,y:H-b+18,'text-anchor':'middle'},M[i]));
+      if(Y[i])g.appendChild(el('text',{x:x+w/2,y:H-b+36,'text-anchor':'middle',style:'font-weight:600;fill:var(--ink)'},Y[i]));
+      svg.appendChild(g);
+    }
+  })();
+
+  /* ---------- small column / range charts ---------- */
+  function cols(id,data,opt){
+    var svg=document.getElementById(id);if(!svg)return;
+    var vb=svg.viewBox.baseVal,W=vb.width,H=vb.height,l=36,r=8,t=18,b=28,max=opt.max,n=data.length,cw=(W-l-r)/n;
+    function y(v){return t+(H-t-b)*(1-v/max);}
+    opt.ticks.forEach(function(v){svg.appendChild(el('line',{x1:l,x2:W-r,y1:y(v),y2:y(v),class:'ax'}));svg.appendChild(el('text',{x:l-6,y:y(v)+4,'text-anchor':'end'},opt.fmt?opt.fmt(v):v));});
+    data.forEach(function(d,i){
+      var x=l+i*cw+cw*.2,w=cw*.6,lo=d.lo||0;
+      var rc=el('rect',{x:x,y:y(d.v),width:w,height:y(lo)-y(d.v),rx:3,fill:css(d.c||opt.c||'--red'),class:'growy'});rc.style.transitionDelay=(i*60)+'ms';svg.appendChild(rc);
+      svg.appendChild(el('text',{x:x+w/2,y:y(d.v)-5,'text-anchor':'middle',class:'val'},d.lab));
+      svg.appendChild(el('text',{x:x+w/2,y:H-b+16,'text-anchor':'middle'},d.x));
+    });
+  }
+  cols('ch-protein',[{x:'Dahi',lo:3,v:5.5,lab:'3–5.5 g',c:'--amber'},{x:'Greek yoghurt',lo:8,v:10,lab:'8–10 g',c:'--blue'},{x:'Skyr',lo:10,v:13,lab:'10–13 g',c:'--red'}],{max:14,ticks:[0,4,8,12]});
+  cols('ch-casein',[{x:'2013',v:11822,lab:'11.8k'},{x:'2014',v:10553,lab:'10.6k'},{x:'2015',v:5971,lab:'6.0k'},{x:'2019',v:1220,lab:'1.2k'},{x:'2020',v:1655,lab:'1.7k'},{x:'2021',v:6558,lab:'6.6k'},{x:'2022',v:8517,lab:'8.5k'},{x:'2023',v:3452,lab:'3.5k'},{x:'2024',v:2593,lab:'2.6k'}].map(function(d){d.c='--amber';return d;}),{max:13000,ticks:[0,4000,8000,12000],fmt:function(v){return v?v/1000+'k':0;}});
+  cols('ch-dienergy',[{x:'2023',v:1.2,lab:'1.2'},{x:'2024',v:1.1,lab:'1.1'},{x:'2025',v:1.0,lab:'1.0'}].map(function(d){d.c='--purple';return d;}),{max:1.4,ticks:[0,0.5,1]});
+
+  /* Chobani line */
+  (function(){
+    var svg=document.getElementById('ch-chobani');if(!svg)return;
+    var d=[[2019,1.29],[2020,1.40],[2022,2.26],[2023,2.53],[2024,2.96],[2025,3.8],[2026,4.6]];
+    var W=360,H=200,l=34,r=14,t=18,b=28;
+    function x(v){return l+(W-l-r)*(v-2019)/7;} function y(v){return t+(H-t-b)*(1-v/5);}
+    [0,1,2,3,4,5].forEach(function(v){svg.appendChild(el('line',{x1:l,x2:W-r,y1:y(v),y2:y(v),class:'ax'}));svg.appendChild(el('text',{x:l-6,y:y(v)+4,'text-anchor':'end'},v));});
+    var p=d.map(function(q,i){return(i?'L':'M')+x(q[0])+' '+y(q[1]);}).join(' ');
+    svg.appendChild(el('path',{d:p+' L'+x(2026)+' '+y(0)+' L'+x(2019)+' '+y(0)+' Z',fill:'var(--red)',opacity:.12}));
+    var line=el('path',{d:p,fill:'none',stroke:'var(--red)','stroke-width':3,'stroke-linejoin':'round',class:'drawline'});svg.appendChild(line);
+    d.forEach(function(q){svg.appendChild(el('circle',{cx:x(q[0]),cy:y(q[1]),r:q[0]===2026?5:3.5,fill:q[0]===2026?'var(--paper)':'var(--red)',stroke:'var(--red)','stroke-width':2}));
+      svg.appendChild(el('text',{x:x(q[0]),y:H-b+16,'text-anchor':'middle'},q[0]===2026?'2026E':"'"+String(q[0]).slice(2)));});
+    svg.appendChild(el('text',{x:x(2025)-6,y:y(3.8)-8,'text-anchor':'end',class:'val'},'$3.8B'));
+    svg.appendChild(el('text',{x:x(2026),y:y(4.6)-10,'text-anchor':'end',class:'val'},'>$4.6B'));
+  })();
+
+  /* concentration grouped bars */
+  (function(){
+    var svg=document.getElementById('ch-conc');if(!svg)return;
+    var W=360,H=210,l=40,r=8,t=18,b=34,max=3500;
+    function y(v){return t+(H-t-b)*(1-v/max);}
+    [0,1000,2000,3000].forEach(function(v){svg.appendChild(el('line',{x1:l,x2:W-r,y1:y(v),y2:y(v),class:'ax'}));svg.appendChild(el('text',{x:l-6,y:y(v)+4,'text-anchor':'end'},v?v/1000+'k':0));});
+    var g=[['Nozzle separator',3031,2031],['Ultrafilter',2857,1857]],gw=(W-l-r)/2;
+    g.forEach(function(q,i){
+      var x0=l+i*gw+gw*.12,bw=gw*.36;
+      [[q[1],'--purple','Feed'],[q[2],'--amber','Whey']].forEach(function(s,j){
+        var x=x0+j*(bw+6);var rc=el('rect',{x:x,y:y(s[0]),width:bw,height:y(0)-y(s[0]),rx:3,fill:css(s[1]),class:'growy'});svg.appendChild(rc);
+        svg.appendChild(el('text',{x:x+bw/2,y:y(s[0])-5,'text-anchor':'middle',class:'val'},s[0].toLocaleString('en-IN')));
+        svg.appendChild(el('text',{x:x+bw/2,y:y(0)+13,'text-anchor':'middle',style:'font-size:10px'},s[2]));
+      });
+      svg.appendChild(el('text',{x:x0+bw+3,y:H-4,'text-anchor':'middle',style:'font-weight:600;fill:var(--ink)'},q[0]));
+    });
+  })();
+
+  /* ---------- decisions register ---------- */
+  var D=[
+    ["10 Dec 2025","Marketing","Shift marketing to performance-led digital, away from conventional TV","On STAIR's recommendation, endorsed by Mr Shailesh Haribhakti"],
+    ["15 Dec 2025","Leadership","Hire Business Heads for Dairy and Ice Cream instead of CEOs","Promoters"],
+    ["15 Dec 2025","Digital","A Dinshaw's-specific AI programme after SAP goes live, not a generic one","Promoters with STAIR"],
+    ["13 Apr 2026","Digital","SAP selected over QAD as the ERP","Promoters, on STAIR's evaluation"],
+    ["13 Apr 2026","Leadership","2-tier leadership model; hiring order set as CHRO, CFO, then Business Heads","Promoters"],
+    ["20 Apr 2026","Factory","Cold-room energy pilot approved, to extend to all 60 cold rooms if it works","Promoters"],
+    ["30 Apr 2026","New Products","Dairy to focus on value-added and niche products rather than volume-led fresh milk","Nagpur review"],
+    ["30 Apr 2026","Digital","Clean-core SAP S/4HANA Public Cloud architecture","Nagpur review"],
+    ["2 Jun 2026","Factory","Low-cost AI vision on existing CCTV rather than heavy IoT hardware","On STAIR's recommendation"],
+    ["13 Jun 2026","Leadership","Bakery and Namkeen role repositioned as a sales-led head","Mr Jimmy Rana, on STAIR's recommendation"],
+    ["4 Jul 2026","Digital","GFI preferred as SAP partner: 7-month build plus 12 months of support","Strategic review"],
+    ["4 Jul 2026","Factory","AI after the ERP stabilises; vendors as technology partners, business logic kept in-house","Strategic review"],
+    ["4 Jul 2026","Factory","Solar project to proceed only with guaranteed performance","Promoters"],
+    ["10 Jul 2026","Factory","AI rollout starts in Ice Cream, without biometrics or facial recognition","Promoters with STAIR"],
+    ["30 Jul 2026","Leadership","Every search runs on a signed, role-specific mandate document","Promoters"],
+    ["1 Aug 2026","Leadership","Standard pay structure: at least 65% fixed with performance-linked variable pay","Promoters"],
+    ["13 Aug 2026","New Products","Ice Cream and Dairy confirmed as the 2 primary verticals","Nagpur visit"],
+    ["13 Aug 2026","Factory","4 factory priorities: Hygiene, FIFO, Manpower and Energy, low-capex first","Nagpur visit"],
+    ["21 Aug 2026","Marketing","Project Pune is the quick commerce priority to mid-November","Mr Zervin Rana"],
+    ["26 Aug 2026","Marketing","New city launches wait until Pune performs","Promoters with STAIR"],
+    ["2 Sep 2026","Governance","Set up a governance board with independent and executive directors","Mr Jimmy Rana with STAIR"],
+    ["8 Sep 2026","Digital","HRMS split: ZingHR for white collar, BlueTree for blue collar and seasonal workers","Promoters"],
+    ["19 Sep 2026","New Products","R&D focus on skyr; mini milk-ice sticks taken up for evaluation","Project review"],
+    ["21 Sep 2026","New Products","Yoghurt plant to be designed to global standards from the start","Mr Jimmy Rana"],
+    ["21 Sep 2026","New Products","East Africa revisited once plant upgrades progress","Promoters"],
+    ["1 Oct 2026","New Products","Only 2 plans, Base and Aspiration; Base Plan signed off","Promoters"],
+    ["1 Oct 2026","New Products","1 claim per product: skyr carries protein, probiotic dahi carries gut health","Promoters"],
+    ["1 Oct 2026","Marketing","Skyr and dahi sold through quick commerce first, corporate pantries second","Promoters"],
+    ["1 Oct 2026","New Products","Build the cheese market on sourced product for about 1 year before any plant","Promoters"],
+    ["1 Oct 2026","Digital","Logistics cost allocated by crate volume in SAP, not by sales value","Promoters"],
+    ["1 Oct 2026","Governance","Separate P&L, balance sheet and cash flow for each vertical","Promoters"],
+    ["1 Oct 2026","Marketing","Pune target reset to a top-3 position with about 20% share","Promoters"],
+    ["1 Oct 2026","Retail","Own stores are company-owned and company-operated; design Proposal 1 chosen","Promoters"],
+    ["3 Oct 2026","Governance","Chairman, MD and ED held by 3 different people; 2 board committees","Promoters"],
+    ["3 Oct 2026","Governance","Professionals author their own plans; promoters advise on direction","Promoters"],
+    ["9 Oct 2026","Digital","HRMS pilots run 1 after the other on 2 months of real data","Mr Zervin Rana"],
+    ["12 Oct 2026","New Products","Fix taste, texture and flavour first, then select the process","Agreed with Tetra Pak, Sweden"],
+    ["12 Oct 2026","Factory","Freeze recipe and process, then size the plant at 120%","Agreed in Sweden"]
+  ];
+  function chips(boxId,list,key,onPick){
+    var box=document.getElementById(boxId);if(!box)return;
+    var cats=['All'],cnt={All:list.length};
+    list.forEach(function(r){var c=r[key];if(cnt[c]==null){cnt[c]=0;cats.push(c);}cnt[c]++;});
+    cats.forEach(function(c,i){
+      var b=document.createElement('button');b.type='button';b.className='chip';b.id=boxId+'-'+i;
+      b.setAttribute('aria-pressed',i===0?'true':'false');
+      b.innerHTML=c+'<span class="n">'+cnt[c]+'</span>';
+      b.addEventListener('click',function(){box.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');onPick(c);});
+      box.appendChild(b);
+    });
+  }
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  var dl=document.getElementById('dlist');
+  function drawD(c){dl.innerHTML=D.filter(function(r){return c==='All'||r[1]===c;}).map(function(r){return '<li><time>'+r[0]+'</time><span>'+esc(r[2])+'<span class="by">'+esc(r[3])+'</span></span><span class="tag">'+r[1]+'</span></li>';}).join('');}
+  chips('dchips',D,1,drawD);drawD('All');
+
+  /* ---------- key documents ---------- */
+  var P=[
+    {f:'1f8b16ab',ws:'Strategy',d:'Oct 2026',t:"Dinshaw's Quarterly Progress Report, Q2",s:'The quarter in which the leadership team began to land, quick commerce proved itself in Pune, and digital and factory work moved into structured evaluation.',k:['3 of 7 leaders secured; CHRO final offer issued','Blinkit April to September up from ~Rs 60 lakh to ~Rs 5 Cr','SAP S/4HANA Public Cloud locked, go-live Jan to Feb 2027','PMG Engineers engaged for a 3-year plant upgrade']},
+    {f:'e1a8a4e2',ws:'New Products',d:'Oct 2026',t:'New Product Development Note: Skyr and Probiotic Dahi',s:'The case for a high-protein skyr and a separate probiotic dahi, with global skyr evidence, the Indian opportunity and casein export economics.',k:['Skyr: 10 to 12 g protein, 0.2 to 1.5% fat, no added sugar','1 claim per product; cups only; Rs 45 to 65 per 100 g','Quick commerce first, corporate pantries second','Casein only alongside a whey, WPC and lactose plant']},
+    {f:'7a809c95',ws:'Governance',d:'Oct 2026',t:'Board Structure and Governance Framework',s:'Why Dinshaw\'s needs a working board as it professionalises, who sits on it and how it becomes a full statutory board within 3 years.',k:['10 seats including 2 independent directors','A quarterly Audit Committee and an annual review','3 stages to a full statutory board by year 3','Capital allocated once, early in the year']},
+    {f:'4c487810',ws:'Governance',d:'Oct 2026',t:'Promoter-Professional Engagement Framework',s:'How the promoters engage with 7 incoming leaders, from induction to a steady state in which professionals own their plans.',k:['Professionals author plans, budgets and OKRs','Promoter sessions step down from 2 a week to fortnightly','Roles reset from a blank sheet every 3 years','A leadership team of 11 by year 3']},
+    {f:'ad286d6f',ws:'Retail',d:'Oct 2026',t:"Dinshaw's Retail Formats: Business Plan",s:'3 own-retail formats with separate jobs: a flagship Ice Cream Studio, a neighbourhood Company Store and a franchised Kiosk.',k:['Studio first in Nagpur and Pune','Company Stores clustered so 1 van serves 6 to 10 a day','Order-to-collection under 3 minutes','A daily sales floor set before any site is signed']},
+    {f:'6097f3b1',ws:'New Products',d:'Oct 2026',t:'Dairy Product Research: Protein, Low Fat and Lactose-Free',s:'A showcase of verified products in 3 categories for the promoters to choose from, plus cheese, paneer and casein routes.',k:['26 protein, 15 low-fat and 13 lactose-free product types','Gap: no protein lassi or chaas at Rs 10 to 20','Cheese built on sourced product for 1 year first','Export rules: EIC certificate, HACCP, FSSAI, IEC']},
+    {f:'24c05c69',ws:'New Products',d:'Oct 2026',t:'Chobani 1.0',s:'A profile of the founder-led company that made strained Greek yoghurt mainstream, with lessons for Indian dairy and ice cream.',k:['US$3.8 billion of net sales in 2025, up 29%','No. 1 US yoghurt brand with 20 to 21% share','Protein from straining, no added sugar','Lesson: lead with natural protein']},
+    {f:'fc180666',ws:'Strategy',d:'Jul 2026',t:'African Value-Added Dairy Products Market Report',s:'Market intelligence across East, West, Southern and North Africa, with a phased route for Indian firms.',k:['8 focus countries across 4 regions','Shelf-stable products outperform; cold chain decides success','Ghee flagged as high-margin and an Indian strength','Export, then local packing, then local manufacturing']},
+    {f:'bc2c8032',ws:'Quick Commerce',d:'Oct 2026',t:'Dcluttr: Evaluation and Competitor Review',s:'An evaluation of a quick commerce analytics copilot and its closest alternatives.',k:['Covers 13 platforms including Blinkit, Zepto and Instamart','Basic plan Rs 75,000 a month for up to 50 SKUs','Closest alternative: GobbleCube','Data accuracy best tested in a pilot']},
+    {f:'ee2bd0e6',ws:'Europe Visit',d:'Oct 2026',t:'Exhaustive Question List for Sweden',s:'The first question bank for Sweden (yoghurt) and Denmark (ice cream), organised around Dinshaw\'s priorities.',k:['222 questions in 26 sections','Pilot trial on Dinshaw\'s own milk and recipes','Digital readiness and energy audit of the Nagpur plant','A joint programme for 3 to 5 new products']},
+    {f:'01baad0e',ws:'Europe Visit',d:'Oct 2026',t:'Tetra Pak Nordic Visit: Updated Question Bank',s:'The final question bank with Mr Jimmy Rana\'s brief on high-protein, no-sugar yoghurt and the drinkable route into India.',k:['272 questions: 164 for Sweden, 108 for Denmark','50 questions from Mr Jimmy Rana\'s brief','Budgets for bottle, tub and cup line options','Capacity scenarios at 15%, 20% and 30% growth']},
+    {f:'a801a546',ws:'Europe Visit',d:'12 Oct 2026',t:'Fermented Dairy Process Flow Charts',s:'Step-by-step factory flows for skyr, dahi, Greek yoghurt and lassi, from milk reception to dispatch.',k:['Skyr 16 steps, dahi 13, Greek yoghurt 17, lassi 15','Critical control points marked','Acid whey is the by-product of skyr and Greek yoghurt','Pectin keeps lassi protein suspended']},
+    {f:'02cf4d9e',ws:'Europe Visit',d:'Oct 2026',t:'Tetra Top and Spoonable Food Packaging',s:'The Tetra Pak deck shared with Dinshaw\'s on chilled carton bottles and the new spoonable carton.',k:['Pack sizes from 150 to 1,000 ml','A volume change in about 5 minutes','Particles premiumise drinkable yoghurt','Spoonable carton with up to 93% renewable content']},
+    {f:'a6a08752',ws:'Strategy',d:'8 Sep 2026',t:"Dinshaw's Update",s:'A 1-page status note across 18 workstreams, from leadership hires to SAP and quick commerce.',k:['Business Head, Ice Cream closed','HRMS split agreed by worker type','SAP project systems demo ready','Factory AI and RFID decks received']},
+    {f:'2ecc630d',ws:'Strategy',d:'19 Sep 2026',t:'Action Items: 19 September Project Discussions',s:'17 action items with owners, from skyr research to Africa and HRMS pilots.',k:['Share the Spain and Malta research site','Keep R&D focus on skyr','Evaluate mini milk-ice sticks','Ask ZingHR for a free pilot']}
+  ];
+  var pd=document.getElementById('pdocs'),lb=[];
+  function drawP(c){
+    pd.innerHTML=P.filter(function(p){return c==='All'||p.ws===c;}).map(function(p){
+      return '<article class="doc"><button class="thumb ph" data-cap="'+esc(p.t)+'"><img src="docs/'+p.f+'.jpg" alt="Cover of '+esc(p.t)+'" loading="lazy"></button><div class="in"><div class="meta"><span class="ws">'+p.ws+'</span><span>'+p.d+'</span></div><h3>'+esc(p.t)+'</h3><p>'+esc(p.s)+'</p><details><summary>Key Points</summary><ul>'+p.k.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></details></div></article>';
+    }).join('');
+    bindLB();
+  }
+  chips('pchips',P,'ws',drawP);
+
+  var L=[
+    ["Sep 2025","Hiring","CHRO job description and skill matrix"],["Sep 2025","Research","SalesCode.ai assessment"],["Oct 2025","Hiring","National Sales Head job description and skill matrix"],
+    ["Oct 2025","Hiring","Skill set for the CEO, Ice Cream and Dairy"],["Nov 2025","Digital","SAP ERP Integration Report"],["Nov 2025","Factory","Factory Ergonomics note"],["Nov 2025","Hiring","Business Head KPI note"],
+    ["Dec 2025","Hiring","CHRO KPI framework"],["Dec 2025","Marketing","Marketing Spends Gold Standard"],["Dec 2025","Governance","Values Manual for incoming leaders"],["Dec 2025","Factory","Factory Optimisation Vendors List"],["Dec 2025","Marketing","Marketing partner requirements: social and digital"],["Dec 2025","Marketing","Questionnaires for CyberMedia and ToggleHead"],
+    ["Jan 2026","Hiring","CFO skill set matrix"],["Jan 2026","Factory","QC Circle Gold Standard research report"],["Jan 2026","Marketing","Brand questionnaire for CyberMedia"],
+    ["Feb 2026","Hiring","Business Head, Dairy job description"],["Mar 2026","Hiring","CFO job description"],["Mar 2026","Digital","SAP Vendor Gap Analysis"],["Mar 2026","Digital","SAP Scope of Work and ERP Blueprint"],["Mar 2026","Digital","DMS Vendor Skill Assessment Matrix"],["Mar 2026","Governance","Minutes of 6 Nagpur review sessions"],
+    ["Apr 2026","Marketing","Note on Quick Commerce and Marketing"],["Apr 2026","Digital","ERP Evaluation: QAD vs SAP"],["Apr 2026","Governance","Strategic minutes and organisation structure"],["Apr 2026","Research","Milky Mist Strategic Case Study"],["Apr 2026","Hiring","Business Head, Mithai, Snacks and Bakery job description"],
+    ["May 2026","Governance","Nagpur visit agendas and minutes"],["May 2026","Research","Milky Mist case study, version 3"],["May 2026","Research","GetAWay Ice Cream and Heritage Foods"],["May 2026","Research","Weather and cold-chain report"],["May 2026","Research","Food Pharmer note"],["May 2026","Hiring","Marketing Coordinator job description"],
+    ["Jun 2026","Digital","SAP gap analysis review and solution design workshop"],["Jun 2026","Hiring","Business Head, Snack Foods job description and skill matrix"],
+    ["Jul 2026","Hiring","Head IT role definition and skill matrix"],["Jul 2026","Governance","Consolidated minutes of the Nagpur Strategic Review"],["Jul 2026","Governance","Q1 FY 2026-27 Strategic Progress Report"],["Jul 2026","Research","African Value-Added Dairy market report"],["Jul 2026","Factory","Plant energy audit review"],
+    ["Aug 2026","Digital","Module-wise AI capability matrix"],["Aug 2026","Factory","Energy optimisation proposal review"],["Aug 2026","Digital","SAP governance pack"],
+    ["Sep 2026","Hiring","Sales Head, Namkeen & Bakery job description and skill matrix"],["Sep 2026","Hiring","Channel Commercial Head job description and skill matrix"],["Sep 2026","Hiring","Head IT job description and skill matrix"],["Sep 2026","Governance","Dinshaw's Update, 8 September"],["Sep 2026","Governance","Action items, 19 September"],["Sep 2026","Research","Spain and Malta primary research site and report"],["Sep 2026","Research","Peer benchmarking of 10 listed companies"],["Sep 2026","Research","Africa opportunity thesis"],
+    ["Oct 2026","Research","New Product Development note: skyr and probiotic dahi"],["Oct 2026","Governance","Board Structure and Governance Framework"],["Oct 2026","Governance","Promoter-Professional Engagement Framework"],["Oct 2026","Retail","Retail formats business plan"],["Oct 2026","Governance","Organisation structure review"],["Oct 2026","Marketing","Instamart CEO brief and quick commerce analysis"],["Oct 2026","Digital","Logistics costing in SAP note"],["Oct 2026","Governance","Nagpur review minutes and 32-item action plan"],["Oct 2026","Governance","Q2 FY 2026-27 Progress Report"],["Oct 2026","Research","Chobani 1.0"],["Oct 2026","Research","Dairy product research: protein, low fat, lactose-free"],["Oct 2026","Marketing","Dcluttr evaluation"],["Oct 2026","Europe Visit","Question bank for Tetra Pak, 222 then 272 questions"],["Oct 2026","Europe Visit","Fermented dairy process flow charts"],["Oct 2026","Europe Visit","Sweden field notes site"],["Oct 2026","Europe Visit","Sweden visit insights and to-dos"]
+  ];
+  var ll=document.getElementById('llist');
+  function drawL(c){ll.innerHTML=L.filter(function(r){return c==='All'||r[1]===c;}).map(function(r){return '<li><time>'+r[0]+'</time><span><span class="w">'+r[1]+'</span>'+esc(r[2])+'</span></li>';}).join('');}
+  chips('lchips',L,1,drawL);drawL('All');
+
+  /* ---------- lightbox ---------- */
+  var dlg=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcap'),idx=0;
+  function bindLB(){
+    lb=Array.prototype.slice.call(document.querySelectorAll('button.ph'));
+    lb.forEach(function(b,i){b.onclick=function(){idx=i;show();if(dlg.showModal&&!dlg.open)dlg.showModal();};});
+  }
+  function show(){var b=lb[idx];if(!b)return;var im=b.querySelector('img');li.src=im.currentSrc||im.src;li.alt=im.alt;lc.textContent=b.getAttribute('data-cap')||'';}
+  document.getElementById('lbx').onclick=function(){dlg.close();};
+  document.getElementById('lbp').onclick=function(){idx=(idx-1+lb.length)%lb.length;show();};
+  document.getElementById('lbn').onclick=function(){idx=(idx+1)%lb.length;show();};
+  dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.classList.contains('lb-in'))dlg.close();});
+  document.addEventListener('keydown',function(e){if(!dlg.open)return;if(e.key==='ArrowRight')document.getElementById('lbn').click();if(e.key==='ArrowLeft')document.getElementById('lbp').click();});
+  drawP('All');
+
+  /* ---------- hero reel ---------- */
+  var figs=document.querySelectorAll('#reel figure'),cap=document.getElementById('reelcap'),ri=0;
+  function setReel(n){
+    figs[ri].classList.remove('on');var ov=figs[ri].querySelector('video');if(ov)ov.pause();
+    ri=n;var f=figs[ri];f.classList.add('on');var v=f.querySelector('video');if(v){v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+    cap.innerHTML='<small>'+f.getAttribute('data-k')+'</small>'+f.getAttribute('data-c');
+  }
+  if(!reduce&&figs.length>1)setInterval(function(){if(!document.hidden)setReel((ri+1)%figs.length);},6500);
+
+  /* ---------- reveal, progress, nav ---------- */
+  var vh=window.innerHeight;
+  var rv=Array.prototype.slice.call(document.querySelectorAll('.rv,.card,.hb'));
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'}):null;
+  if(io&&!reduce){rv.forEach(function(e){if(e.getBoundingClientRect().top>vh*0.95){e.classList.add('pre');io.observe(e);}});}
+  var charts=document.querySelectorAll('svg.chart');
+  if(io&&!reduce){Array.prototype.forEach.call(charts,function(s){var p=s.closest('.card');if(p&&p.getBoundingClientRect().top>vh*.95){p.classList.add('pre');io.observe(p);}});}
+
+  var pr=document.getElementById('progress'),links=Array.prototype.slice.call(document.querySelectorAll('#navlinks a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  var rail=document.getElementById('railfill'),phs=document.getElementById('phases'),phase=document.querySelectorAll('.phase');
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;pr.style.transform='scaleX('+(h>0?scrollY/h:0)+')';
+    var cur=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*.35)cur=i;});
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur&&scrollY>200);});
+    if(phs){var r=phs.getBoundingClientRect(),f=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));rail.style.transform='scaleY('+f+')';
+      Array.prototype.forEach.call(phase,function(p){p.classList.toggle('lit',p.getBoundingClientRect().top<innerHeight*.6);});}
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var activeLink=null;links.forEach(function(a){a.addEventListener('click',function(){activeLink=a;});});
+
+  /* count-up */
+  if(!reduce){document.querySelectorAll('[data-count]').forEach(function(b){var n=+b.getAttribute('data-count'),t0=null;function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1400);b.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step);}b.textContent='0';requestAnimationFrame(step);});}
+})();
+</script>
+
+</body></html>
